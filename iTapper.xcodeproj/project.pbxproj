@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B50B246F18EC535D006FC005 /* Model.xcdatamodeld */; };
+		B50B247818EC53FE006FC005 /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B247718EC53FE006FC005 /* HighScore.m */; };
+		B50B247A18EC5A51006FC005 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50B247918EC5A51006FC005 /* CoreData.framework */; };
+		B50B247E18EC5CE1006FC005 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B247D18EC5CE1006FC005 /* Score.m */; };
+		B50B248118ED9CE8006FC005 /* TapOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B248018ED9CE8006FC005 /* TapOffViewController.m */; };
+		B50B248318EDE748006FC005 /* icon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B248218EDE748006FC005 /* icon120x120.png */; };
+		B50B248818EDECBD006FC005 /* developerScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = B50B248618EDECBD006FC005 /* developerScreen.png */; };
+		B50B248C18EDEEAF006FC005 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B248B18EDEEAF006FC005 /* MenuViewController.m */; };
+		B5970EEB18EB41B10096F6A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5970EEA18EB41B10096F6A3 /* Foundation.framework */; };
+		B5970EED18EB41B10096F6A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5970EEC18EB41B10096F6A3 /* CoreGraphics.framework */; };
+		B5970EEF18EB41B10096F6A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5970EEE18EB41B10096F6A3 /* UIKit.framework */; };
+		B5970EF518EB41B10096F6A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5970EF318EB41B10096F6A3 /* InfoPlist.strings */; };
+		B5970EF718EB41B10096F6A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970EF618EB41B10096F6A3 /* main.m */; };
+		B5970EFB18EB41B10096F6A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970EFA18EB41B10096F6A3 /* AppDelegate.m */; };
+		B5970EFE18EB41B10096F6A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5970EFC18EB41B10096F6A3 /* Main.storyboard */; };
+		B5970F0118EB41B10096F6A3 /* FastTapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F0018EB41B10096F6A3 /* FastTapperViewController.m */; };
+		B5970F0318EB41B10096F6A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5970F0218EB41B10096F6A3 /* Images.xcassets */; };
+		B5970F0A18EB41B10096F6A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5970F0918EB41B10096F6A3 /* XCTest.framework */; };
+		B5970F0B18EB41B10096F6A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5970EEA18EB41B10096F6A3 /* Foundation.framework */; };
+		B5970F0C18EB41B10096F6A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5970EEE18EB41B10096F6A3 /* UIKit.framework */; };
+		B5970F1418EB41B10096F6A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5970F1218EB41B10096F6A3 /* InfoPlist.strings */; };
+		B5970F1618EB41B10096F6A3 /* TapCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F1518EB41B10096F6A3 /* TapCounterTests.m */; };
+		B5970F2118EB48C50096F6A3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F2018EB48C50096F6A3 /* MainViewController.m */; };
+		D722705D18F0A93E00BAEF80 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D722705C18F0A93E00BAEF80 /* beep-07.mp3 */; };
+		D72E11B318F0C6F400B4F1E0 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */; };
+		D76A7DF218F0B64100D35291 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76A7DF118F0B64100D35291 /* AVFoundation.framework */; };
+		D7859D5A18F49A00005EE4D7 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7859D5918F49A00005EE4D7 /* startButton.png */; };
+		D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7859D5B18F4A152005EE4D7 /* tapButton.png */; };
+		D7A262A618F4307E00F12A75 /* fastTapperButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A118F4307E00F12A75 /* fastTapperButton.png */; };
+		D7A262A718F4307E00F12A75 /* launchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A218F4307E00F12A75 /* launchScreen.png */; };
+		D7A262A818F4307E00F12A75 /* menuScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A318F4307E00F12A75 /* menuScreen.png */; };
+		D7A262AA18F4307E00F12A75 /* tapOffButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A518F4307E00F12A75 /* tapOffButton.png */; };
+		D7A262AC18F4326B00F12A75 /* water-droplet-1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D7A262AB18F4326B00F12A75 /* water-droplet-1.mp3 */; };
+		D7A262B418F43C3F00F12A75 /* tapOffScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262B318F43C3E00F12A75 /* tapOffScreen.png */; };
+		D7A262C118F4592600F12A75 /* Museo-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7A262AD18F4373100F12A75 /* Museo-300.otf */; };
+		D7A262C218F4592800F12A75 /* Museo-500.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7A262AE18F4373100F12A75 /* Museo-500.otf */; };
+		D7A262C318F4592A00F12A75 /* Museo-700.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7A262AF18F4373100F12A75 /* Museo-700.otf */; };
+		D7A262C518F45C6C00F12A75 /* scoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262C418F45C6C00F12A75 /* scoresButton.png */; };
+		D7A262C818F4686700F12A75 /* player1TapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262C618F4686700F12A75 /* player1TapButton.png */; };
+		D7A262C918F4686700F12A75 /* player2TapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262C718F4686700F12A75 /* player2TapButton.png */; };
+		D7A262CB18F46D5500F12A75 /* fastTapperScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262CA18F46D5500F12A75 /* fastTapperScreen.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5970F0D18EB41B10096F6A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5970EDF18EB41B10096F6A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5970EE618EB41B10096F6A3;
+			remoteInfo = TapCounter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B50B247018EC535D006FC005 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B50B247618EC53FE006FC005 /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
+		B50B247718EC53FE006FC005 /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
+		B50B247918EC5A51006FC005 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B50B247C18EC5CE1006FC005 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		B50B247D18EC5CE1006FC005 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		B50B247F18ED9CE8006FC005 /* TapOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapOffViewController.h; sourceTree = "<group>"; };
+		B50B248018ED9CE8006FC005 /* TapOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapOffViewController.m; sourceTree = "<group>"; };
+		B50B248218EDE748006FC005 /* icon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120x120.png; sourceTree = "<group>"; };
+		B50B248618EDECBD006FC005 /* developerScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = developerScreen.png; sourceTree = "<group>"; };
+		B50B248A18EDEEAF006FC005 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		B50B248B18EDEEAF006FC005 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		B5970EE718EB41B10096F6A3 /* iTapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5970EEA18EB41B10096F6A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5970EEC18EB41B10096F6A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B5970EEE18EB41B10096F6A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B5970EF218EB41B10096F6A3 /* iTapper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTapper-Info.plist"; sourceTree = "<group>"; };
+		B5970EF418EB41B10096F6A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5970EF618EB41B10096F6A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5970EF818EB41B10096F6A3 /* iTapper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iTapper-Prefix.pch"; sourceTree = "<group>"; };
+		B5970EF918EB41B10096F6A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5970EFA18EB41B10096F6A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5970EFD18EB41B10096F6A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5970EFF18EB41B10096F6A3 /* FastTapperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastTapperViewController.h; sourceTree = "<group>"; };
+		B5970F0018EB41B10096F6A3 /* FastTapperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastTapperViewController.m; sourceTree = "<group>"; };
+		B5970F0218EB41B10096F6A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5970F0818EB41B10096F6A3 /* iTapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5970F0918EB41B10096F6A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B5970F1118EB41B10096F6A3 /* iTapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTapperTests-Info.plist"; sourceTree = "<group>"; };
+		B5970F1318EB41B10096F6A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5970F1518EB41B10096F6A3 /* TapCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapCounterTests.m; sourceTree = "<group>"; };
+		B5970F1F18EB48C50096F6A3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B5970F2018EB48C50096F6A3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D722705C18F0A93E00BAEF80 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
+		D72E11B118F0C6F400B4F1E0 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		D76A7DF118F0B64100D35291 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D7859D5918F49A00005EE4D7 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
+		D7859D5B18F4A152005EE4D7 /* tapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapButton.png; sourceTree = "<group>"; };
+		D7A262A118F4307E00F12A75 /* fastTapperButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fastTapperButton.png; sourceTree = "<group>"; };
+		D7A262A218F4307E00F12A75 /* launchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen.png; sourceTree = "<group>"; };
+		D7A262A318F4307E00F12A75 /* menuScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuScreen.png; sourceTree = "<group>"; };
+		D7A262A518F4307E00F12A75 /* tapOffButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapOffButton.png; sourceTree = "<group>"; };
+		D7A262AB18F4326B00F12A75 /* water-droplet-1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "water-droplet-1.mp3"; sourceTree = "<group>"; };
+		D7A262AD18F4373100F12A75 /* Museo-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Museo-300.otf"; sourceTree = "<group>"; };
+		D7A262AE18F4373100F12A75 /* Museo-500.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Museo-500.otf"; sourceTree = "<group>"; };
+		D7A262AF18F4373100F12A75 /* Museo-700.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Museo-700.otf"; sourceTree = "<group>"; };
+		D7A262B318F43C3E00F12A75 /* tapOffScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapOffScreen.png; sourceTree = "<group>"; };
+		D7A262C418F45C6C00F12A75 /* scoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoresButton.png; sourceTree = "<group>"; };
+		D7A262C618F4686700F12A75 /* player1TapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player1TapButton.png; sourceTree = "<group>"; };
+		D7A262C718F4686700F12A75 /* player2TapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2TapButton.png; sourceTree = "<group>"; };
+		D7A262CA18F46D5500F12A75 /* fastTapperScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fastTapperScreen.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5970EE418EB41B10096F6A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D76A7DF218F0B64100D35291 /* AVFoundation.framework in Frameworks */,
+				B50B247A18EC5A51006FC005 /* CoreData.framework in Frameworks */,
+				B5970EED18EB41B10096F6A3 /* CoreGraphics.framework in Frameworks */,
+				B5970EEF18EB41B10096F6A3 /* UIKit.framework in Frameworks */,
+				B5970EEB18EB41B10096F6A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5970F0518EB41B10096F6A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5970F0A18EB41B10096F6A3 /* XCTest.framework in Frameworks */,
+				B5970F0C18EB41B10096F6A3 /* UIKit.framework in Frameworks */,
+				B5970F0B18EB41B10096F6A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B50B247518EC53B1006FC005 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B50B247618EC53FE006FC005 /* HighScore.h */,
+				B50B247718EC53FE006FC005 /* HighScore.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		B50B247B18EC5CB4006FC005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B50B247C18EC5CE1006FC005 /* Score.h */,
+				B50B247D18EC5CE1006FC005 /* Score.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B5970EDE18EB41B10096F6A3 = {
+			isa = PBXGroup;
+			children = (
+				B5970EFC18EB41B10096F6A3 /* Main.storyboard */,
+				B50B246F18EC535D006FC005 /* Model.xcdatamodeld */,
+				B5970EF018EB41B10096F6A3 /* TapCounter */,
+				B5970F0F18EB41B10096F6A3 /* TapCounterTests */,
+				B5970EE918EB41B10096F6A3 /* Frameworks */,
+				B5970EE818EB41B10096F6A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5970EE818EB41B10096F6A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5970EE718EB41B10096F6A3 /* iTapper.app */,
+				B5970F0818EB41B10096F6A3 /* iTapperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5970EE918EB41B10096F6A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D76A7DF118F0B64100D35291 /* AVFoundation.framework */,
+				B50B247918EC5A51006FC005 /* CoreData.framework */,
+				B5970EEA18EB41B10096F6A3 /* Foundation.framework */,
+				B5970EEC18EB41B10096F6A3 /* CoreGraphics.framework */,
+				B5970EEE18EB41B10096F6A3 /* UIKit.framework */,
+				B5970F0918EB41B10096F6A3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5970EF018EB41B10096F6A3 /* TapCounter */ = {
+			isa = PBXGroup;
+			children = (
+				B50B247B18EC5CB4006FC005 /* Models */,
+				B50B247518EC53B1006FC005 /* Data */,
+				B5970EF918EB41B10096F6A3 /* AppDelegate.h */,
+				B5970EFA18EB41B10096F6A3 /* AppDelegate.m */,
+				B5970EFF18EB41B10096F6A3 /* FastTapperViewController.h */,
+				B5970F0018EB41B10096F6A3 /* FastTapperViewController.m */,
+				D72E11B118F0C6F400B4F1E0 /* LaunchViewController.h */,
+				D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */,
+				B5970F1F18EB48C50096F6A3 /* MainViewController.h */,
+				B5970F2018EB48C50096F6A3 /* MainViewController.m */,
+				B50B248A18EDEEAF006FC005 /* MenuViewController.h */,
+				B50B248B18EDEEAF006FC005 /* MenuViewController.m */,
+				B50B247F18ED9CE8006FC005 /* TapOffViewController.h */,
+				B50B248018ED9CE8006FC005 /* TapOffViewController.m */,
+				B5970F0218EB41B10096F6A3 /* Images.xcassets */,
+				B5970EF118EB41B10096F6A3 /* Supporting Files */,
+			);
+			path = TapCounter;
+			sourceTree = "<group>";
+		};
+		B5970EF118EB41B10096F6A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7A262B018F4373900F12A75 /* Fonts */,
+				D7A262B118F4374300F12A75 /* Images */,
+				D7A262B218F4374F00F12A75 /* Music */,
+				B5970EF218EB41B10096F6A3 /* iTapper-Info.plist */,
+				B5970EF318EB41B10096F6A3 /* InfoPlist.strings */,
+				B5970EF618EB41B10096F6A3 /* main.m */,
+				B5970EF818EB41B10096F6A3 /* iTapper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5970F0F18EB41B10096F6A3 /* TapCounterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5970F1518EB41B10096F6A3 /* TapCounterTests.m */,
+				B5970F1018EB41B10096F6A3 /* Supporting Files */,
+			);
+			path = TapCounterTests;
+			sourceTree = "<group>";
+		};
+		B5970F1018EB41B10096F6A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5970F1118EB41B10096F6A3 /* iTapperTests-Info.plist */,
+				B5970F1218EB41B10096F6A3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7A262B018F4373900F12A75 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7A262AD18F4373100F12A75 /* Museo-300.otf */,
+				D7A262AE18F4373100F12A75 /* Museo-500.otf */,
+				D7A262AF18F4373100F12A75 /* Museo-700.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D7A262B118F4374300F12A75 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D7859D5B18F4A152005EE4D7 /* tapButton.png */,
+				D7859D5918F49A00005EE4D7 /* startButton.png */,
+				D7A262CA18F46D5500F12A75 /* fastTapperScreen.png */,
+				D7A262C618F4686700F12A75 /* player1TapButton.png */,
+				D7A262C718F4686700F12A75 /* player2TapButton.png */,
+				D7A262C418F45C6C00F12A75 /* scoresButton.png */,
+				D7A262B318F43C3E00F12A75 /* tapOffScreen.png */,
+				D7A262A118F4307E00F12A75 /* fastTapperButton.png */,
+				D7A262A218F4307E00F12A75 /* launchScreen.png */,
+				D7A262A318F4307E00F12A75 /* menuScreen.png */,
+				D7A262A518F4307E00F12A75 /* tapOffButton.png */,
+				B50B248618EDECBD006FC005 /* developerScreen.png */,
+				B50B248218EDE748006FC005 /* icon120x120.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D7A262B218F4374F00F12A75 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				D7A262AB18F4326B00F12A75 /* water-droplet-1.mp3 */,
+				D722705C18F0A93E00BAEF80 /* beep-07.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5970EE618EB41B10096F6A3 /* iTapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5970F1918EB41B10096F6A3 /* Build configuration list for PBXNativeTarget "iTapper" */;
+			buildPhases = (
+				B5970EE318EB41B10096F6A3 /* Sources */,
+				B5970EE418EB41B10096F6A3 /* Frameworks */,
+				B5970EE518EB41B10096F6A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTapper;
+			productName = TapCounter;
+			productReference = B5970EE718EB41B10096F6A3 /* iTapper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5970F0718EB41B10096F6A3 /* iTapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5970F1C18EB41B10096F6A3 /* Build configuration list for PBXNativeTarget "iTapperTests" */;
+			buildPhases = (
+				B5970F0418EB41B10096F6A3 /* Sources */,
+				B5970F0518EB41B10096F6A3 /* Frameworks */,
+				B5970F0618EB41B10096F6A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5970F0E18EB41B10096F6A3 /* PBXTargetDependency */,
+			);
+			name = iTapperTests;
+			productName = TapCounterTests;
+			productReference = B5970F0818EB41B10096F6A3 /* iTapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5970EDF18EB41B10096F6A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = appguys.biz;
+				TargetAttributes = {
+					B5970F0718EB41B10096F6A3 = {
+						TestTargetID = B5970EE618EB41B10096F6A3;
+					};
+				};
+			};
+			buildConfigurationList = B5970EE218EB41B10096F6A3 /* Build configuration list for PBXProject "iTapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5970EDE18EB41B10096F6A3;
+			productRefGroup = B5970EE818EB41B10096F6A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5970EE618EB41B10096F6A3 /* iTapper */,
+				B5970F0718EB41B10096F6A3 /* iTapperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5970EE518EB41B10096F6A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7859D5A18F49A00005EE4D7 /* startButton.png in Resources */,
+				D7A262A818F4307E00F12A75 /* menuScreen.png in Resources */,
+				D7A262C218F4592800F12A75 /* Museo-500.otf in Resources */,
+				D7A262AC18F4326B00F12A75 /* water-droplet-1.mp3 in Resources */,
+				B5970F0318EB41B10096F6A3 /* Images.xcassets in Resources */,
+				D7A262CB18F46D5500F12A75 /* fastTapperScreen.png in Resources */,
+				D7A262C518F45C6C00F12A75 /* scoresButton.png in Resources */,
+				D7A262A618F4307E00F12A75 /* fastTapperButton.png in Resources */,
+				B50B248318EDE748006FC005 /* icon120x120.png in Resources */,
+				D7A262C818F4686700F12A75 /* player1TapButton.png in Resources */,
+				D7A262AA18F4307E00F12A75 /* tapOffButton.png in Resources */,
+				D722705D18F0A93E00BAEF80 /* beep-07.mp3 in Resources */,
+				B5970EF518EB41B10096F6A3 /* InfoPlist.strings in Resources */,
+				D7A262C318F4592A00F12A75 /* Museo-700.otf in Resources */,
+				D7A262B418F43C3F00F12A75 /* tapOffScreen.png in Resources */,
+				D7A262C918F4686700F12A75 /* player2TapButton.png in Resources */,
+				B50B248818EDECBD006FC005 /* developerScreen.png in Resources */,
+				D7A262A718F4307E00F12A75 /* launchScreen.png in Resources */,
+				D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */,
+				D7A262C118F4592600F12A75 /* Museo-300.otf in Resources */,
+				B5970EFE18EB41B10096F6A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5970F0618EB41B10096F6A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5970F1418EB41B10096F6A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5970EE318EB41B10096F6A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50B248118ED9CE8006FC005 /* TapOffViewController.m in Sources */,
+				B50B248C18EDEEAF006FC005 /* MenuViewController.m in Sources */,
+				B5970F0118EB41B10096F6A3 /* FastTapperViewController.m in Sources */,
+				D72E11B318F0C6F400B4F1E0 /* LaunchViewController.m in Sources */,
+				B5970EFB18EB41B10096F6A3 /* AppDelegate.m in Sources */,
+				B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */,
+				B5970EF718EB41B10096F6A3 /* main.m in Sources */,
+				B50B247E18EC5CE1006FC005 /* Score.m in Sources */,
+				B50B247818EC53FE006FC005 /* HighScore.m in Sources */,
+				B5970F2118EB48C50096F6A3 /* MainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5970F0418EB41B10096F6A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5970F1618EB41B10096F6A3 /* TapCounterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5970F0E18EB41B10096F6A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5970EE618EB41B10096F6A3 /* iTapper */;
+			targetProxy = B5970F0D18EB41B10096F6A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5970EF318EB41B10096F6A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5970EF418EB41B10096F6A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5970EFC18EB41B10096F6A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5970EFD18EB41B10096F6A3 /* Base */,
+			);
+			name = Main.storyboard;
+			path = TapCounter;
+			sourceTree = "<group>";
+		};
+		B5970F1218EB41B10096F6A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5970F1318EB41B10096F6A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5970F1718EB41B10096F6A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5970F1818EB41B10096F6A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5970F1A18EB41B10096F6A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TapCounter/iTapper-Prefix.pch";
+				INFOPLIST_FILE = "TapCounter/iTapper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = iTapper;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B5970F1B18EB41B10096F6A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TapCounter/iTapper-Prefix.pch";
+				INFOPLIST_FILE = "TapCounter/iTapper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = iTapper;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B5970F1D18EB41B10096F6A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TapCounter.app/TapCounter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TapCounter/TapCounter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TapCounterTests/iTapperTests-Info.plist";
+				PRODUCT_NAME = iTapperTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B5970F1E18EB41B10096F6A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TapCounter.app/TapCounter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TapCounter/TapCounter-Prefix.pch";
+				INFOPLIST_FILE = "TapCounterTests/iTapperTests-Info.plist";
+				PRODUCT_NAME = iTapperTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5970EE218EB41B10096F6A3 /* Build configuration list for PBXProject "iTapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5970F1718EB41B10096F6A3 /* Debug */,
+				B5970F1818EB41B10096F6A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5970F1918EB41B10096F6A3 /* Build configuration list for PBXNativeTarget "iTapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5970F1A18EB41B10096F6A3 /* Debug */,
+				B5970F1B18EB41B10096F6A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5970F1C18EB41B10096F6A3 /* Build configuration list for PBXNativeTarget "iTapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5970F1D18EB41B10096F6A3 /* Debug */,
+				B5970F1E18EB41B10096F6A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B50B246F18EC535D006FC005 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B50B247018EC535D006FC005 /* Model.xcdatamodel */,
+			);
+			currentVersion = B50B247018EC535D006FC005 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = TapCounter/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B5970EDF18EB41B10096F6A3 /* Project object */;
+}

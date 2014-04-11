@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B50B246F18EC535D006FC005 /* Model.xcdatamodeld */; };
-		B50B247818EC53FE006FC005 /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B247718EC53FE006FC005 /* HighScore.m */; };
 		B50B247A18EC5A51006FC005 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50B247918EC5A51006FC005 /* CoreData.framework */; };
 		B50B247E18EC5CE1006FC005 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B247D18EC5CE1006FC005 /* Score.m */; };
 		B50B248118ED9CE8006FC005 /* TapOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B248018ED9CE8006FC005 /* TapOffViewController.m */; };
@@ -30,6 +29,8 @@
 		B5970F1418EB41B10096F6A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5970F1218EB41B10096F6A3 /* InfoPlist.strings */; };
 		B5970F1618EB41B10096F6A3 /* TapCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F1518EB41B10096F6A3 /* TapCounterTests.m */; };
 		B5970F2118EB48C50096F6A3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F2018EB48C50096F6A3 /* MainViewController.m */; };
+		D718130818F88A140043D339 /* settingsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D718130718F88A140043D339 /* settingsBtn.png */; };
+		D718130B18F8A0CF0043D339 /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D718130A18F8A0CF0043D339 /* HighScore.m */; };
 		D722705D18F0A93E00BAEF80 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D722705C18F0A93E00BAEF80 /* beep-07.mp3 */; };
 		D72E11B318F0C6F400B4F1E0 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */; };
 		D76A7DF218F0B64100D35291 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76A7DF118F0B64100D35291 /* AVFoundation.framework */; };
@@ -62,8 +63,6 @@
 
 /* Begin PBXFileReference section */
 		B50B247018EC535D006FC005 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		B50B247618EC53FE006FC005 /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
-		B50B247718EC53FE006FC005 /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		B50B247918EC5A51006FC005 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B50B247C18EC5CE1006FC005 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		B50B247D18EC5CE1006FC005 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
@@ -94,6 +93,9 @@
 		B5970F1518EB41B10096F6A3 /* TapCounterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TapCounterTests.m; sourceTree = "<group>"; };
 		B5970F1F18EB48C50096F6A3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B5970F2018EB48C50096F6A3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D718130718F88A140043D339 /* settingsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsBtn.png; sourceTree = "<group>"; };
+		D718130918F8A0CF0043D339 /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
+		D718130A18F8A0CF0043D339 /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		D722705C18F0A93E00BAEF80 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		D72E11B118F0C6F400B4F1E0 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
@@ -144,8 +146,8 @@
 		B50B247518EC53B1006FC005 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B50B247618EC53FE006FC005 /* HighScore.h */,
-				B50B247718EC53FE006FC005 /* HighScore.m */,
+				D718130918F8A0CF0043D339 /* HighScore.h */,
+				D718130A18F8A0CF0043D339 /* HighScore.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -261,6 +263,7 @@
 		D7A262B118F4374300F12A75 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D718130718F88A140043D339 /* settingsBtn.png */,
 				D7859D5B18F4A152005EE4D7 /* tapButton.png */,
 				D7859D5918F49A00005EE4D7 /* startButton.png */,
 				D7A262CA18F46D5500F12A75 /* fastTapperScreen.png */,
@@ -380,6 +383,7 @@
 				D7A262B418F43C3F00F12A75 /* tapOffScreen.png in Resources */,
 				D7A262C918F4686700F12A75 /* player2TapButton.png in Resources */,
 				B50B248818EDECBD006FC005 /* developerScreen.png in Resources */,
+				D718130818F88A140043D339 /* settingsBtn.png in Resources */,
 				D7A262A718F4307E00F12A75 /* launchScreen.png in Resources */,
 				D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */,
 				D7A262C118F4592600F12A75 /* Museo-300.otf in Resources */,
@@ -402,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D718130B18F8A0CF0043D339 /* HighScore.m in Sources */,
 				B50B248118ED9CE8006FC005 /* TapOffViewController.m in Sources */,
 				B50B248C18EDEEAF006FC005 /* MenuViewController.m in Sources */,
 				B5970F0118EB41B10096F6A3 /* FastTapperViewController.m in Sources */,
@@ -410,7 +415,6 @@
 				B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */,
 				B5970EF718EB41B10096F6A3 /* main.m in Sources */,
 				B50B247E18EC5CE1006FC005 /* Score.m in Sources */,
-				B50B247818EC53FE006FC005 /* HighScore.m in Sources */,
 				B5970F2118EB48C50096F6A3 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,8 @@
 //
 //  HighScore.h
-//  TapCounter
+//  iTapper
 //
-//  Created by Benjamin Myers on 4/2/14.
+//  Created by Benjamin Myers on 4/11/14.
 //  Copyright (c) 2014 appguys.biz. All rights reserved.
 //
 
@@ -12,7 +12,8 @@
 
 @interface HighScore : NSManagedObject
 
-@property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSNumber * score;
+@property (nonatomic, retain) NSString * username;
+@property (nonatomic, retain) NSString * gameType;
 
 @end

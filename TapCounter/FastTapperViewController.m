@@ -27,7 +27,10 @@
 	
 	_scoreInstance = [[Score alloc]init];
 	_tapCount = 0;
-	_lblHighScore.text = [_scoreInstance getHighScore];
+	_clock = 10;
+    _gameLength = 10;
+    _gameType = @"Sprint";
+	_lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
     [self setFonts];
 }
 
@@ -52,6 +55,40 @@
 	}
 }
 
+- (IBAction)changeGameType:(id)sender
+{
+    _clock = [sender tag];
+    _gameLength = [sender tag];
+    _lblTimer.text = [NSString stringWithFormat:@"%ld", (long)[sender tag]];
+    
+    switch ([sender tag]) {
+        case 10:
+            _gameType = @"Sprint";
+            _lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
+            break;
+        case 30:
+            _gameType = @"Half-Marathon";
+            _lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
+            break;
+        case 60:
+            _gameType = @"Marathon";
+            _lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (IBAction)toggleSettingsView:(id)sender
+{
+    if ([sender tag] == 100) {
+        _vwSettings.hidden = NO;
+    } else {
+        _vwSettings.hidden = YES;
+    }
+}
+
 - (void)setFonts
 {
     _lblCounterTitle.font = [UIFont fontWithName:@"Museo-300" size:20];
@@ -67,8 +104,8 @@
 
 - (IBAction)startTimer:(id)sender
 {
+    _clock = _gameLength;
 	_tapCount = 0;
-	_clock = 10;
 	_lblCounter.text = @"0";
 	_lblTimer.text = [NSString stringWithFormat:@"%d", _clock];
 	_isTimerStarted = YES;
@@ -76,7 +113,6 @@
     _btnTap.hidden = NO;
 	
     NSTimer *countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown:) userInfo:nil repeats:YES];
-	NSLog(@"%@", countdownTimer);
 }
 
 - (void)countdown:(NSTimer *)timer
@@ -88,7 +124,7 @@
     }
 	if (_clock <= 0) {
 		[timer invalidate];
-        _tapsPerSecond = (float)_tapCount / 10;
+        _tapsPerSecond = (float)_tapCount / _gameLength;
 		_isTimerStarted = NO;
 		_lblScore.text = [NSString stringWithFormat:@"%d", _tapCount];
         _lblTapsPerSecond.text = [NSString stringWithFormat:@"%0.1f taps/sec", _tapsPerSecond];
@@ -98,9 +134,9 @@
 }
 
 - (IBAction)saveScore:(id)sender {
-	[_scoreInstance checkScores:_tapCount];
+	[_scoreInstance checkScores:_tapCount withGameType:_gameType];
 	_vwScore.hidden = YES;
-	_lblHighScore.text = [_scoreInstance getHighScore];
+	_lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
     _btnStart.hidden = NO;
 }
 

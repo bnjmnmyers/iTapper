@@ -369,6 +369,91 @@
                                     <segue destination="u5Y-vV-ppY" kind="modal" id="fw6-MF-WKZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OUr-8a-dQh">
+                                <rect key="frame" x="276" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingsBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleSettingsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="auT-Yn-ptq"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" id="CIq-Jd-j0f">
+                                <rect key="frame" x="37" y="61" width="245" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ToR-Z5-OKf">
+                                        <rect key="frame" x="75" y="20" width="95" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9P3-Qd-sKz">
+                                        <rect key="frame" x="20" y="51" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Sprint">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeGameType:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ikn-k0-gkJ"/>
+                                            <action selector="toggleSettingsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uGx-xE-2Fe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Wk-Gy-azX">
+                                        <rect key="frame" x="20" y="95" width="99" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Half-Marathon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeGameType:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a6w-tu-u5i"/>
+                                            <action selector="toggleSettingsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TU6-3b-RHi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="60" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kZj-Hf-rZ3">
+                                        <rect key="frame" x="20" y="139" width="66" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Marathon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeGameType:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3qr-9C-yex"/>
+                                            <action selector="toggleSettingsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IrT-ki-d0J"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 10 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="34O-wU-D7i">
+                                        <rect key="frame" x="69" y="55" width="101" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 30 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7uM-0t-DAP">
+                                        <rect key="frame" x="123" y="99" width="101" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 60 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oQN-e7-DbG">
+                                        <rect key="frame" x="89" y="144" width="101" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WSF-fC-r7y">
+                                        <rect key="frame" x="192" y="16" width="40" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleSettingsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fe1-U9-ePQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -386,6 +471,7 @@
                         <outlet property="lblTimerTitle" destination="JkO-xf-vSe" id="sE8-je-LjD"/>
                         <outlet property="lblViewControllerTitle" destination="13n-EK-cbE" id="hMj-2o-mJP"/>
                         <outlet property="vwScore" destination="in2-nY-2iL" id="e0a-vb-68U"/>
+                        <outlet property="vwSettings" destination="CIq-Jd-j0f" id="eqQ-9e-krZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -402,6 +488,7 @@
         <image name="player1TapButton.png" width="440" height="440"/>
         <image name="player2TapButton.png" width="440" height="440"/>
         <image name="scoresButton.png" width="50" height="95"/>
+        <image name="settingsBtn.png" width="48" height="48"/>
         <image name="startButton.png" width="426" height="218"/>
         <image name="tapButton.png" width="534" height="535"/>
         <image name="tapOffButton.png" width="180" height="76"/>

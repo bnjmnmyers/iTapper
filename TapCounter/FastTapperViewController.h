@@ -34,16 +34,23 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblTapsPerSecond;
 @property (strong, nonatomic) IBOutlet UILabel *lblViewControllerTitle;
 @property (strong, nonatomic) IBOutlet UIView *vwScore;
+@property (strong, nonatomic) IBOutlet UIView *vwSettings;
 
 // Variable Properties
-@property (assign) int tapCount;
 @property (assign) int clock;
+@property (assign) int gameLength;
+@property (assign) int tapCount;
 @property (assign) float tapsPerSecond;
 @property (assign) BOOL isTimerStarted;
+@property (strong, nonatomic) NSString *gameType;
 
 // Actions
 - (IBAction)startTimer:(id)sender;
 - (IBAction)saveScore:(id)sender;
 - (IBAction)playerTap:(id)sender;
+- (IBAction)changeGameType:(id)sender;
+- (IBAction)toggleSettingsView:(id)sender;
+
+
 
 @end

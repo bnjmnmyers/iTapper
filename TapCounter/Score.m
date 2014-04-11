@@ -19,13 +19,13 @@
 
 @implementation Score
 
-- (void)checkScores:(int)currentScore
+- (void)checkScores:(int)currentScore withGameType:(NSString *)gameType
 {
-    [self queryData];
-	[self saveScore:currentScore];
+    [self queryDataWithPredicate:gameType];
+	[self saveScore:currentScore withGameType:gameType];
 }
 
-- (void)saveScore:(int)currentScore
+- (void)saveScore:(int)currentScore withGameType:(NSString *)gameType;
 {
 	id delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [delegate managedObjectContext];
@@ -42,6 +42,7 @@
 		
 		newScore.username = @"Bizawesome";
 		newScore.score = [NSNumber numberWithInt:currentScore];
+        newScore.gameType = gameType;
 	}
 	
 	// If thew new score is higher than a previous score then replace the lowest score with the current score
@@ -60,9 +61,9 @@
 	[self.managedObjectContext save:nil];
 }
 
-- (NSString *)getHighScore
+- (NSString *)getHighScoreWithGameType:(NSString *)gameType
 {
-	[self queryData];
+	[self queryDataWithPredicate:gameType];
 	if ([_scoresArray count] > 0) {
 		HighScore *highScoreObj = [_scoresArray objectAtIndex:0];
 		_highScore = [NSString stringWithFormat:@"%@", highScoreObj.score];
@@ -86,6 +87,29 @@
 	
 	[_fetchRequest setEntity:_entity];
 	[_fetchRequest setSortDescriptors:_sortDescriptors];
+	
+	NSError *error = nil;
+	
+	_scoresArray = [[self managedObjectContext] executeFetchRequest:_fetchRequest error:&error];
+	
+	return _scoresArray;
+}
+
+
+- (NSArray *)queryDataWithPredicate:(NSString *)predicate
+{
+	id delegate = [[UIApplication sharedApplication] delegate];
+    self.managedObjectContext = [delegate managedObjectContext];
+	
+	_fetchRequest = [[NSFetchRequest alloc] init];
+	_entity = [NSEntityDescription entityForName:@"HighScore" inManagedObjectContext:[self managedObjectContext]];
+	_sort = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
+	_sortDescriptors = [[NSArray alloc]initWithObjects:_sort, nil];
+    _predicate = [NSPredicate predicateWithFormat:@"gameType = %@", predicate];
+	
+	[_fetchRequest setEntity:_entity];
+	[_fetchRequest setSortDescriptors:_sortDescriptors];
+    [_fetchRequest setPredicate:_predicate];
 	
 	NSError *error = nil;
 	

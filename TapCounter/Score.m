@@ -31,6 +31,9 @@
     self.managedObjectContext = [delegate managedObjectContext];
 	
 	NSNumber *currentScoreNum = [NSNumber numberWithInt:currentScore];
+    NSLocale *currentLocale = [NSLocale currentLocale];  // get the current locale.
+    NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
+    
 	if ([_scoresArray count] >= 10) {
 		_lowestScore = [_scoresArray objectAtIndex:9];
 		_lowestScoreNum = _lowestScore.score;
@@ -43,6 +46,7 @@
 		newScore.username = @"Bizawesome";
 		newScore.score = [NSNumber numberWithInt:currentScore];
         newScore.gameType = gameType;
+        newScore.country = countryCode;
 	}
 	
 	// If thew new score is higher than a previous score then replace the lowest score with the current score

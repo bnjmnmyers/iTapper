@@ -2,7 +2,7 @@
 //  HighScore.m
 //  iTapper
 //
-//  Created by Benjamin Myers on 4/11/14.
+//  Created by Benjamin Myers on 4/14/14.
 //  Copyright (c) 2014 appguys.biz. All rights reserved.
 //
 
@@ -11,8 +11,9 @@
 
 @implementation HighScore
 
+@dynamic gameType;
 @dynamic score;
 @dynamic username;
-@dynamic gameType;
+@dynamic country;
 
 @end

@@ -98,7 +98,9 @@
     _lblHighScore.font = [UIFont fontWithName:@"Museo-700" size:20];
     _lblTimerTitle.font = [UIFont fontWithName:@"Museo-700" size:24];
     _lblTimer.font = [UIFont fontWithName:@"Museo-700" size:100];
-    _btnMenu.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
+    
+    _btnMenu.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:15];
+    _btnSave.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
 ;
 }
 
@@ -112,11 +114,18 @@
 	_btnStart.hidden = YES;
     _btnTap.hidden = NO;
 	
-    NSTimer *countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown:) userInfo:nil repeats:YES];
+    _countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown:) userInfo:nil repeats:YES];
 }
 
 - (void)countdown:(NSTimer *)timer
 {
+    // Invalidate timer if going back to menu
+    if( _isTimerInvalidateSet )
+    {
+        [timer invalidate];
+        return;
+    }
+    
 	[self setClock:(_clock -1)];
 	_lblTimer.text = [NSString stringWithFormat:@"%d", _clock];
     if (_clock <= 3) {
@@ -131,6 +140,13 @@
         _btnTap.hidden = YES;
 		_vwScore.hidden = NO;
 	}
+}
+
+- (IBAction)gotoMenu:(id)sender {
+    _isTimerInvalidateSet = true;
+    [ self countdown:_countdownTimer ] ; // theTimerInstance is same as earlier you passed to `moveStickFig`
+    
+    _isTimerInvalidateSet = false;
 }
 
 - (IBAction)saveScore:(id)sender {

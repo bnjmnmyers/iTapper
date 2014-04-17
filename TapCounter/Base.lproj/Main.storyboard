@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aKS-hV-FNZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="aKS-hV-FNZ">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -149,6 +149,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="getSprintScores:" destination="waK-Fi-joU" eventType="touchUpInside" id="tTn-xn-DaQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JII-RL-m4G">
                                 <rect key="frame" x="109" y="45" width="103" height="30"/>
@@ -158,6 +161,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="getHalfMarathonScores:" destination="waK-Fi-joU" eventType="touchUpInside" id="tlC-4T-yfy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jnM-hM-McR">
                                 <rect key="frame" x="234" y="45" width="66" height="30"/>
@@ -167,6 +173,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="getMarathonScores:" destination="waK-Fi-joU" eventType="touchUpInside" id="zCn-Dx-T4B"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 10 Sprint Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MTw-54-Ftr">
                                 <rect key="frame" x="20" y="90" width="280" height="21"/>
@@ -384,26 +393,26 @@
                         <outlet property="btnMenu" destination="TiO-4Z-Xy2" id="KXF-PK-CLD"/>
                         <outlet property="btnSettings" destination="BSn-eB-ii9" id="AN5-Fk-G5o"/>
                         <outlet property="btnSprintScores" destination="43I-Vp-gR0" id="dsX-WA-Dbb"/>
-                        <outlet property="lbl10thPlace" destination="mdi-j4-Fbp" id="9Wo-wu-gZD"/>
-                        <outlet property="lbl10thPlaceScore" destination="cKw-pN-rB6" id="ZLL-y3-PtH"/>
-                        <outlet property="lbl1stPlace" destination="YA2-SU-nfE" id="G4u-l6-7fw"/>
-                        <outlet property="lbl1stPlaceScore" destination="Omk-PD-ktb" id="mYI-qB-L42"/>
-                        <outlet property="lbl2ndPlace" destination="kJS-1U-iN2" id="yuv-yR-8eK"/>
-                        <outlet property="lbl2ndPlaceScore" destination="8gK-pg-lQH" id="Non-fG-5ov"/>
-                        <outlet property="lbl3rdPlace" destination="NW3-em-2nR" id="yXj-kg-OWI"/>
-                        <outlet property="lbl3rdPlaceScore" destination="Jwh-oX-5tv" id="D4a-SG-OF6"/>
-                        <outlet property="lbl4thPlace" destination="I7z-hj-wkR" id="Fqb-9x-cgg"/>
-                        <outlet property="lbl4thPlaceScore" destination="hSl-ed-R2Q" id="dUr-cp-DqR"/>
-                        <outlet property="lbl5thPlace" destination="Xec-uA-kNb" id="bxv-HD-yZu"/>
-                        <outlet property="lbl5thPlaceScore" destination="7Mo-ou-LeS" id="8Xa-tQ-TN1"/>
-                        <outlet property="lbl6thPlace" destination="iAG-ht-ox0" id="o4m-OL-lLY"/>
-                        <outlet property="lbl6thPlaceScore" destination="BwG-xs-DiS" id="DpO-oI-7cR"/>
-                        <outlet property="lbl7thPlace" destination="cLl-46-CYi" id="Qya-hJ-Hom"/>
-                        <outlet property="lbl7thPlaceScore" destination="ccP-vS-33O" id="uyt-kR-ZHu"/>
-                        <outlet property="lbl8thPlace" destination="ncw-8C-MX6" id="m1s-uI-YaU"/>
-                        <outlet property="lbl8thPlaceScore" destination="ZuC-nd-LNF" id="m8g-0a-N62"/>
-                        <outlet property="lbl9thPlace" destination="QhN-HI-SSp" id="043-xK-u2k"/>
-                        <outlet property="lbl9thPlaceScore" destination="8ux-fZ-VDp" id="AHK-cZ-PsL"/>
+                        <outlet property="lbl10Place" destination="mdi-j4-Fbp" id="iHy-Ol-lfI"/>
+                        <outlet property="lbl10PlaceScore" destination="cKw-pN-rB6" id="Voz-ta-35J"/>
+                        <outlet property="lbl1Place" destination="YA2-SU-nfE" id="R4L-2y-ExX"/>
+                        <outlet property="lbl1PlaceScore" destination="Omk-PD-ktb" id="ZNd-C9-Nt7"/>
+                        <outlet property="lbl2Place" destination="kJS-1U-iN2" id="Lwk-OA-dJo"/>
+                        <outlet property="lbl2PlaceScore" destination="8gK-pg-lQH" id="NMh-d9-wZ4"/>
+                        <outlet property="lbl3Place" destination="NW3-em-2nR" id="hoz-Pt-Hc8"/>
+                        <outlet property="lbl3PlaceScore" destination="Jwh-oX-5tv" id="M3s-0P-PqO"/>
+                        <outlet property="lbl4Place" destination="I7z-hj-wkR" id="Uje-8g-RtZ"/>
+                        <outlet property="lbl4PlaceScore" destination="hSl-ed-R2Q" id="aq1-LB-O1F"/>
+                        <outlet property="lbl5Place" destination="Xec-uA-kNb" id="QGz-H8-4P1"/>
+                        <outlet property="lbl5PlaceScore" destination="7Mo-ou-LeS" id="6uG-Qa-enk"/>
+                        <outlet property="lbl6Place" destination="iAG-ht-ox0" id="9ba-wJ-dsM"/>
+                        <outlet property="lbl6PlaceScore" destination="BwG-xs-DiS" id="8mZ-0L-3eX"/>
+                        <outlet property="lbl7Place" destination="cLl-46-CYi" id="e6b-fl-uFf"/>
+                        <outlet property="lbl7PlaceScore" destination="ccP-vS-33O" id="Tm1-Jq-WfI"/>
+                        <outlet property="lbl8Place" destination="ncw-8C-MX6" id="SsP-9U-dnn"/>
+                        <outlet property="lbl8PlaceScore" destination="ZuC-nd-LNF" id="EBt-bP-pWj"/>
+                        <outlet property="lbl9Place" destination="QhN-HI-SSp" id="WTQ-9p-1Q3"/>
+                        <outlet property="lbl9PlaceScore" destination="8ux-fZ-VDp" id="sC6-Bv-us2"/>
                         <outlet property="lblScoresTitle" destination="MTw-54-Ftr" id="jTa-rP-Dp8"/>
                         <outlet property="lblViewControllerTitle" destination="Ass-Qb-eIe" id="243-cn-jg6"/>
                     </connections>
@@ -826,9 +835,7 @@
         <image name="player1TapButton.png" width="440" height="440"/>
         <image name="player2TapButton.png" width="440" height="440"/>
         <image name="resultsView.png" width="560" height="340"/>
-        <image name="resultsView.png" width="560" height="340"/>
         <image name="scoresButton.png" width="50" height="95"/>
-        <image name="settingsBtn.png" width="48" height="48"/>
         <image name="settingsBtn.png" width="48" height="48"/>
         <image name="startButton.png" width="426" height="218"/>
         <image name="tapButton.png" width="534" height="535"/>
@@ -841,6 +848,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="116-3G-PTg"/>
+        <segue reference="phs-3M-RfT"/>
     </inferredMetricsTieBreakers>
 </document>

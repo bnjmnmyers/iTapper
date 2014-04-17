@@ -27,32 +27,34 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnMarathonScores;
 @property (strong, nonatomic) IBOutlet UILabel *lblViewControllerTitle;
 @property (strong, nonatomic) IBOutlet UILabel *lblScoresTitle;
-
-@property (strong, nonatomic) IBOutlet UILabel *lbl1stPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl1stPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl2ndPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl2ndPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl3rdPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl3rdPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl4thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl4thPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl5thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl5thPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl6thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl6thPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl7thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl7thPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl8thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl8thPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl9thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl9thPlaceScore;
-@property (strong, nonatomic) IBOutlet UILabel *lbl10thPlace;
-@property (strong, nonatomic) IBOutlet UILabel *lbl10thPlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl1Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl1PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl2Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl2PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl3Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl3PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl4Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl4PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl5Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl5PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl6Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl6PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl7Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl7PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl8Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl8PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl9Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl9PlaceScore;
+@property (strong, nonatomic) IBOutlet UILabel *lbl10Place;
+@property (strong, nonatomic) IBOutlet UILabel *lbl10PlaceScore;
 
 // Variable Properties
 
 
 // Actions
+- (IBAction)getSprintScores:(id)sender;
+- (IBAction)getHalfMarathonScores:(id)sender;
+- (IBAction)getMarathonScores:(id)sender;
 
 
 @end

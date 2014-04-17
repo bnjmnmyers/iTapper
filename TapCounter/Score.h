@@ -20,4 +20,5 @@
 
 - (void)checkScores:(int)currentScore withGameType:(NSString *)gameType;
 - (NSString *)getHighScoreWithGameType:(NSString *)gameType;
+- (NSArray *)queryDataWithPredicate:(NSString *)predicate;
 @end

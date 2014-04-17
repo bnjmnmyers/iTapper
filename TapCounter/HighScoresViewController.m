@@ -7,8 +7,12 @@
 //
 
 #import "HighScoresViewController.h"
+#import "Score.h"
+#import "HighScore.h"
 
 @interface HighScoresViewController ()
+
+@property (strong, nonatomic) Score *scoreInstance;
 
 @end
 
@@ -26,8 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _scoreInstance = [[Score alloc]init];
 	// Do any additional setup after loading the view.
     [self setFonts];
+    [self getSprintScores:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +60,55 @@
 
 - (void)setScoreLableWithGameType:(NSString *)gameType
 {
-    _lblScoresTitle.text = [NSString stringWithFormat:@"Top 10 %@ Score", gameType];
+    _lblScoresTitle.text = [NSString stringWithFormat:@"Top 10 %@ Scores", gameType];
+}
+
+- (IBAction)getSprintScores:(id)sender
+{
+    _scoresArray = [_scoreInstance queryDataWithPredicate:@"Sprint"];
+    [self setScoreLableWithGameType:@"Sprint"];
+    [self getScores];
+}
+
+- (IBAction)getHalfMarathonScores:(id)sender
+{
+    _scoresArray = [_scoreInstance queryDataWithPredicate:@"Half-Marathon"];
+    [self setScoreLableWithGameType:@"Half-Marathon"];
+    [self getScores];
+}
+
+- (IBAction)getMarathonScores:(id)sender
+{
+    _scoresArray = [_scoreInstance queryDataWithPredicate:@"Marathon"];
+    [self setScoreLableWithGameType:@"Marathon"];
+    [self getScores];
+}
+
+- (void)getScores
+{
+    // Reset Labels
+    for (int i = 1; i < 11; i++) {
+        [self setValue:[UIFont fontWithName:@"Museo-500" size:14] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlace.font", i]];
+        [self setValue:[UIFont fontWithName:@"Museo-500" size:14] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlaceScore.font", i]];
+        [self setValue:[NSString stringWithFormat:@"-"] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlace.text", i]];
+        [self setValue:[NSString stringWithFormat:@"-"] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlaceScore.text", i]];
+    }
+    
+    if ([_scoresArray count] > 0) {
+        for (int i = 0; i < [_scoresArray count]; i++) {
+            int scorePlace = i+1;
+            HighScore *highScoreObj = [_scoresArray objectAtIndex:i];
+            NSLog(@"%@", highScoreObj.score);
+            [self setValue:[NSString stringWithFormat:@"%@", highScoreObj.username] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlace.text", scorePlace]];
+            [self setValue:[NSString stringWithFormat:@"%@", highScoreObj.score] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlaceScore.text", scorePlace]];
+        }
+    }
+    else{
+        for (int i = 1; i < 11; i++) {
+            [self setValue:[NSString stringWithFormat:@"-"] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlace.text", i]];
+            [self setValue:[NSString stringWithFormat:@"-"] forKeyPath:[NSString stringWithFormat:@"_lbl%iPlaceScore.text", i]];
+        }
+    }
 }
 
 @end

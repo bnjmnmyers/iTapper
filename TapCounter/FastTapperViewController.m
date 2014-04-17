@@ -97,10 +97,12 @@
     _lblCounter.font = [UIFont fontWithName:@"Museo-700" size:20];
     _lblHighScore.font = [UIFont fontWithName:@"Museo-700" size:20];
     _lblTimerTitle.font = [UIFont fontWithName:@"Museo-700" size:24];
+    _lblTapsPerSecond.font = [UIFont fontWithName:@"Museo-500" size:24];
+    _lblScore.font = [UIFont fontWithName:@"Museo-700" size:40];
     _lblTimer.font = [UIFont fontWithName:@"Museo-700" size:100];
     
-    _btnMenu.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:15];
     _btnSave.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
+    _btnMenu.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:18];
 ;
 }
 

@@ -48,9 +48,6 @@
 	_btnPlayer2Tap.transform = CGAffineTransformMakeRotation(- M_PI_2/.5);
 	_btnPlayer1Tap.enabled = NO;
 	_btnPlayer2Tap.enabled = NO;
-    for (NSString* s in [UIFont familyNames])
-        NSLog(@"%@: %@", s, [UIFont fontNamesForFamilyName:s]);
-    NSLog(@"%@",[UIFont familyNames]);
 }
 
 - (BOOL)prefersStatusBarHidden{

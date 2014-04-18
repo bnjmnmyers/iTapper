@@ -8,11 +8,13 @@
 
 #import "FastTapperViewController.h"
 #import "Score.h"
+#import "CurrentUserModel.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface FastTapperViewController ()
 
 @property (strong, nonatomic) Score *scoreInstance;
+@property (strong, nonatomic) CurrentUserModel *currentUserModelInstance;
 
 @end
 
@@ -27,6 +29,7 @@
 	self.managedObjectContext = [delegate managedObjectContext];
 	
 	_scoreInstance = [[Score alloc]init];
+    _currentUserModelInstance = [[CurrentUserModel alloc]init];
 	_tapCount = 0;
 	_clock = 10;
     _gameLength = 10;
@@ -140,6 +143,7 @@
     }
 	if (_clock <= 0) {
 		[timer invalidate];
+        _tfUsername.text = [_currentUserModelInstance getCurrentUser];
         _tapsPerSecond = (float)_tapCount / _gameLength;
 		_isTimerStarted = NO;
 		_lblScore.text = [NSString stringWithFormat:@"%d", _tapCount];
@@ -169,6 +173,7 @@
 
 - (IBAction)saveScore:(id)sender
 {
+    [_currentUserModelInstance saveCurrentUser:_tfUsername.text];
     _username = _tfUsername.text;
 	[_scoreInstance checkScores:_tapCount withGameType:_gameType andUsername:_username];
 	_vwScore.hidden = YES;

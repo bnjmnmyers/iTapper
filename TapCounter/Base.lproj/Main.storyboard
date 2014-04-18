@@ -688,7 +688,7 @@
                                     <action selector="toggleSettingsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="auT-Yn-ptq"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="CIq-Jd-j0f">
+                            <view hidden="YES" contentMode="scaleToFill" id="CIq-Jd-j0f">
                                 <rect key="frame" x="37" y="142" width="245" height="284"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -763,7 +763,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="in2-nY-2iL">
+                            <view hidden="YES" contentMode="scaleToFill" id="in2-nY-2iL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>

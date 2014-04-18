@@ -37,6 +37,8 @@
 		D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7859D5B18F4A152005EE4D7 /* tapButton.png */; };
 		D788D37618FDBBF500317938 /* fastTapperScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D788D37518FDBBF500317938 /* fastTapperScreen.png */; };
 		D788D37818FDEED600317938 /* resultsView.png in Resources */ = {isa = PBXBuildFile; fileRef = D788D37718FDEED600317938 /* resultsView.png */; };
+		D7904A4F1901661200DE850E /* CurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7904A4E1901661200DE850E /* CurrentUser.m */; };
+		D7904A52190166C800DE850E /* CurrentUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7904A51190166C800DE850E /* CurrentUserModel.m */; };
 		D7A262A618F4307E00F12A75 /* fastTapperButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A118F4307E00F12A75 /* fastTapperButton.png */; };
 		D7A262A718F4307E00F12A75 /* launchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A218F4307E00F12A75 /* launchScreen.png */; };
 		D7A262A818F4307E00F12A75 /* menuScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262A318F4307E00F12A75 /* menuScreen.png */; };
@@ -105,6 +107,10 @@
 		D7859D5B18F4A152005EE4D7 /* tapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapButton.png; sourceTree = "<group>"; };
 		D788D37518FDBBF500317938 /* fastTapperScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fastTapperScreen.png; sourceTree = "<group>"; };
 		D788D37718FDEED600317938 /* resultsView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultsView.png; sourceTree = "<group>"; };
+		D7904A4D1901661200DE850E /* CurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUser.h; sourceTree = "<group>"; };
+		D7904A4E1901661200DE850E /* CurrentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentUser.m; sourceTree = "<group>"; };
+		D7904A50190166C800DE850E /* CurrentUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUserModel.h; sourceTree = "<group>"; };
+		D7904A51190166C800DE850E /* CurrentUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentUserModel.m; sourceTree = "<group>"; };
 		D7A262A118F4307E00F12A75 /* fastTapperButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fastTapperButton.png; sourceTree = "<group>"; };
 		D7A262A218F4307E00F12A75 /* launchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen.png; sourceTree = "<group>"; };
 		D7A262A318F4307E00F12A75 /* menuScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuScreen.png; sourceTree = "<group>"; };
@@ -153,6 +159,8 @@
 		B50B247518EC53B1006FC005 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D7904A4D1901661200DE850E /* CurrentUser.h */,
+				D7904A4E1901661200DE850E /* CurrentUser.m */,
 				D7BC3E9018FC2CD4009B6334 /* HighScore.h */,
 				D7BC3E9118FC2CD4009B6334 /* HighScore.m */,
 			);
@@ -164,6 +172,8 @@
 			children = (
 				B50B247C18EC5CE1006FC005 /* Score.h */,
 				B50B247D18EC5CE1006FC005 /* Score.m */,
+				D7904A50190166C800DE850E /* CurrentUserModel.h */,
+				D7904A51190166C800DE850E /* CurrentUserModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -425,11 +435,13 @@
 				B5970F0118EB41B10096F6A3 /* FastTapperViewController.m in Sources */,
 				D72E11B318F0C6F400B4F1E0 /* LaunchViewController.m in Sources */,
 				B5970EFB18EB41B10096F6A3 /* AppDelegate.m in Sources */,
+				D7904A4F1901661200DE850E /* CurrentUser.m in Sources */,
 				B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */,
 				D7BC3E9518FC2E62009B6334 /* HighScoresViewController.m in Sources */,
 				B5970EF718EB41B10096F6A3 /* main.m in Sources */,
 				B50B247E18EC5CE1006FC005 /* Score.m in Sources */,
 				B5970F2118EB48C50096F6A3 /* MainViewController.m in Sources */,
+				D7904A52190166C800DE850E /* CurrentUserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

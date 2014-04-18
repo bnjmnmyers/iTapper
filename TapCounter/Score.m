@@ -9,6 +9,8 @@
 #import "Score.h"
 #import "HighScore.h"
 
+#define webServiceSaveScore @"http://www.appguys.biz/JSON/iTapperJSON.php?key=weBeTappin"
+
 @interface Score ()
 
 @property (assign) NSString *highScore;
@@ -19,13 +21,13 @@
 
 @implementation Score
 
-- (void)checkScores:(int)currentScore withGameType:(NSString *)gameType
+- (void)checkScores:(int)currentScore withGameType:(NSString *)gameType andUsername:(NSString *)username
 {
     [self queryDataWithPredicate:gameType];
-	[self saveScore:currentScore withGameType:gameType];
+	[self saveScore:currentScore withGameType:gameType andUsername:username];
 }
 
-- (void)saveScore:(int)currentScore withGameType:(NSString *)gameType;
+- (void)saveScore:(int)currentScore withGameType:(NSString *)gameType andUsername:(NSString *)username
 {
 	id delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [delegate managedObjectContext];
@@ -43,7 +45,7 @@
 	if ([_scoresArray count] < 10) {
 		HighScore *newScore = [NSEntityDescription insertNewObjectForEntityForName:@"HighScore" inManagedObjectContext:[self managedObjectContext]];
 		
-		newScore.username = @"Bizawesome";
+		newScore.username = username;
 		newScore.score = [NSNumber numberWithInt:currentScore];
         newScore.gameType = gameType;
         newScore.country = countryCode;
@@ -58,9 +60,15 @@
 //			NSLog(@"%@", score.score);
 //		}
 		
-		newTop10Score.username = @"Bizawesome";
+		newTop10Score.username = username;
 		newTop10Score.score = currentScoreNum;
 	}
+    
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@&username=%@&score=%d&gameType=%@&country=%@", webServiceSaveScore, username, currentScore, gameType, countryCode];
+	NSLog(@"%@", urlString);
+	NSURL *url = [[NSURL alloc]initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+	NSData *data = [NSData dataWithContentsOfURL:url];
 	
 	[self.managedObjectContext save:nil];
 }

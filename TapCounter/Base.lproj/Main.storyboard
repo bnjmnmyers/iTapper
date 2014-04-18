@@ -643,7 +643,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Tapper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="13n-EK-cbE">
-                                <rect key="frame" x="104" y="23" width="112" height="21"/>
+                                <rect key="frame" x="104" y="18" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -667,7 +667,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F3c-nT-PR5">
-                                <rect key="frame" x="13" y="19" width="62" height="30"/>
+                                <rect key="frame" x="13" y="14" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -679,7 +679,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OUr-8a-dQh">
-                                <rect key="frame" x="276" y="22" width="24" height="24"/>
+                                <rect key="frame" x="276" y="17" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="settingsBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -689,7 +689,7 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" id="CIq-Jd-j0f">
-                                <rect key="frame" x="38" y="-12" width="245" height="284"/>
+                                <rect key="frame" x="37" y="142" width="245" height="284"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ToR-Z5-OKf">
@@ -764,7 +764,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" id="in2-nY-2iL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="-1" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resultsView.png" id="oiS-S2-u3x">
@@ -772,14 +772,14 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ai9-aS-ECI">
-                                        <rect key="frame" x="60" y="246" width="200" height="70"/>
+                                        <rect key="frame" x="60" y="273" width="200" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <color key="textColor" red="0.51372551919999998" green="0.76862752440000004" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="urK-Qy-2km">
-                                        <rect key="frame" x="88" y="324" width="145" height="21"/>
+                                        <rect key="frame" x="88" y="341" width="145" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.51372551919999998" green="0.76862752440000004" blue="0.33333334329999997" alpha="1" colorSpace="deviceRGB"/>
@@ -796,6 +796,26 @@
                                             <action selector="saveScore:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Py-UM-fBd"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" id="8kU-1x-tZ5">
+                                        <rect key="frame" x="36" y="245" width="248" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <connections>
+                                            <action selector="hideKeyboard:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="4bT-NL-Ui3"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X41-Nb-b5w">
+                                        <rect key="frame" x="36" y="206" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeResultsView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L8u-25-RMc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                             </view>
@@ -803,6 +823,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="btnClose" destination="X41-Nb-b5w" id="KdR-Hw-oiy"/>
                         <outlet property="btnMenu" destination="F3c-nT-PR5" id="Hiw-nZ-P7p"/>
                         <outlet property="btnSave" destination="BFi-Fh-KLB" id="1lQ-VP-aty"/>
                         <outlet property="btnStart" destination="I1Z-sO-gN6" id="6wk-lk-aSR"/>
@@ -816,6 +837,7 @@
                         <outlet property="lblTimer" destination="IYo-mQ-mku" id="s2E-HQ-SSJ"/>
                         <outlet property="lblTimerTitle" destination="JkO-xf-vSe" id="sE8-je-LjD"/>
                         <outlet property="lblViewControllerTitle" destination="13n-EK-cbE" id="hMj-2o-mJP"/>
+                        <outlet property="tfUsername" destination="8kU-1x-tZ5" id="NFm-Ni-fY0"/>
                         <outlet property="vwScore" destination="in2-nY-2iL" id="e0a-vb-68U"/>
                         <outlet property="vwSettings" destination="CIq-Jd-j0f" id="eqQ-9e-krZ"/>
                     </connections>
@@ -848,6 +870,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="phs-3M-RfT"/>
+        <segue reference="fw6-MF-WKZ"/>
     </inferredMetricsTieBreakers>
 </document>

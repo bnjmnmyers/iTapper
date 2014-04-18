@@ -9,6 +9,7 @@
 #import "FastTapperViewController.h"
 #import "Score.h"
 #import <AVFoundation/AVFoundation.h>
+
 @interface FastTapperViewController ()
 
 @property (strong, nonatomic) Score *scoreInstance;
@@ -101,6 +102,7 @@
     _lblScore.font = [UIFont fontWithName:@"Museo-700" size:40];
     _lblTimer.font = [UIFont fontWithName:@"Museo-700" size:100];
     
+    _btnClose.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
     _btnSave.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
     _btnMenu.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:18];
 ;
@@ -108,6 +110,9 @@
 
 - (IBAction)startTimer:(id)sender
 {
+    if (![_username isEqualToString:@" "]) {
+        _tfUsername.text = _username;
+    }
     _clock = _gameLength;
 	_tapCount = 0;
 	_lblCounter.text = @"0";
@@ -151,11 +156,25 @@
     _isTimerInvalidateSet = false;
 }
 
-- (IBAction)saveScore:(id)sender {
-	[_scoreInstance checkScores:_tapCount withGameType:_gameType];
+- (IBAction)closeResultsView:(id)sender
+{
+    _vwScore.hidden = YES;
+    [_tfUsername resignFirstResponder];
+}
+
+- (IBAction)hideKeyboard:(id)sender
+{
+    [self resignFirstResponder];
+}
+
+- (IBAction)saveScore:(id)sender
+{
+    _username = _tfUsername.text;
+	[_scoreInstance checkScores:_tapCount withGameType:_gameType andUsername:_username];
 	_vwScore.hidden = YES;
 	_lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
     _btnStart.hidden = NO;
+    [_tfUsername resignFirstResponder];
 }
 
 - (void)playAudio {

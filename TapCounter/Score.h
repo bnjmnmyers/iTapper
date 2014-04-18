@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSPredicate *predicate;
 @property (strong, nonatomic) NSArray *scoresArray;
 
-- (void)checkScores:(int)currentScore withGameType:(NSString *)gameType;
+- (void)checkScores:(int)currentScore withGameType:(NSString *)gameType andUsername:(NSString *)username;
 - (NSString *)getHighScoreWithGameType:(NSString *)gameType;
 - (NSArray *)queryDataWithPredicate:(NSString *)predicate;
 @end

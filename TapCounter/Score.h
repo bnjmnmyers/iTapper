@@ -10,6 +10,7 @@
 
 @interface Score : NSObject
 
+// CoreData Properties
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSFetchRequest *fetchRequest;
 @property (strong, nonatomic) NSEntityDescription *entity;
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) NSPredicate *predicate;
 @property (strong, nonatomic) NSArray *scoresArray;
 
+// Actions
 - (void)checkScores:(int)currentScore withGameType:(NSString *)gameType andUsername:(NSString *)username;
 - (NSString *)getHighScoreWithGameType:(NSString *)gameType;
 - (NSArray *)queryDataWithPredicate:(NSString *)predicate;

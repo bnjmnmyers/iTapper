@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface TapOffViewController : UIViewController
+@interface TapOffViewController : UIViewController <ADBannerViewDelegate>
 
 // UI Properties
+@property (strong, nonatomic) IBOutlet ADBannerView *bannerView;
 @property (strong, nonatomic) IBOutlet UILabel *lblPlayer1Score;
 @property (strong, nonatomic) IBOutlet UILabel *lblPlayer2Score;
 @property (strong, nonatomic) IBOutlet UIButton *btnCloseResults;

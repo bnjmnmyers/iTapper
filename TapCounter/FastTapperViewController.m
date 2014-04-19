@@ -27,7 +27,7 @@
 	
 	id delegate = [[UIApplication sharedApplication] delegate];
 	self.managedObjectContext = [delegate managedObjectContext];
-	
+    
 	_scoreInstance = [[Score alloc]init];
     _currentUserModelInstance = [[CurrentUserModel alloc]init];
 	_tapCount = 0;
@@ -101,11 +101,12 @@
     _lblCounter.font = [UIFont fontWithName:@"Museo-700" size:20];
     _lblHighScore.font = [UIFont fontWithName:@"Museo-700" size:20];
     _lblTimerTitle.font = [UIFont fontWithName:@"Museo-700" size:24];
-    _lblTapsPerSecond.font = [UIFont fontWithName:@"Museo-500" size:24];
+    _lblTapsPerSecond.font = [UIFont fontWithName:@"Museo-500" size:20];
     _lblScore.font = [UIFont fontWithName:@"Museo-700" size:40];
     _lblTimer.font = [UIFont fontWithName:@"Museo-700" size:100];
     
     _btnClose.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
+    _btnCloseGameMode.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
     _btnSave.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:16];
     _btnMenu.titleLabel.font = [UIFont fontWithName:@"Museo-500" size:18];
 ;
@@ -163,6 +164,7 @@
 - (IBAction)closeResultsView:(id)sender
 {
     _vwScore.hidden = YES;
+    _btnStart.hidden = NO;
     [_tfUsername resignFirstResponder];
 }
 
@@ -177,8 +179,8 @@
     _username = _tfUsername.text;
 	[_scoreInstance checkScores:_tapCount withGameType:_gameType andUsername:_username];
 	_vwScore.hidden = YES;
-	_lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
     _btnStart.hidden = NO;
+	_lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
     [_tfUsername resignFirstResponder];
 }
 

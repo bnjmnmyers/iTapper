@@ -54,6 +54,11 @@
 		D7BC3E9218FC2CD4009B6334 /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC3E9118FC2CD4009B6334 /* HighScore.m */; };
 		D7BC3E9518FC2E62009B6334 /* HighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC3E9418FC2E62009B6334 /* HighScoresViewController.m */; };
 		D7BC3E9718FC52C7009B6334 /* highScoresScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BC3E9618FC52C7009B6334 /* highScoresScreen.png */; };
+		D7C814691901C70F00B3CD0B /* halfMarathonButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C814661901C70F00B3CD0B /* halfMarathonButton.png */; };
+		D7C8146A1901C70F00B3CD0B /* marathonButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C814671901C70F00B3CD0B /* marathonButton.png */; };
+		D7C8146B1901C70F00B3CD0B /* sprintButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C814681901C70F00B3CD0B /* sprintButton.png */; };
+		D7C8146D1901C7F500B3CD0B /* gameModesView.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C8146C1901C7F500B3CD0B /* gameModesView.png */; };
+		D7C8146F1902FFDB00B3CD0B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C8146E1902FFDB00B3CD0B /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +133,11 @@
 		D7BC3E9318FC2E61009B6334 /* HighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoresViewController.h; sourceTree = "<group>"; };
 		D7BC3E9418FC2E62009B6334 /* HighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoresViewController.m; sourceTree = "<group>"; };
 		D7BC3E9618FC52C7009B6334 /* highScoresScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highScoresScreen.png; sourceTree = "<group>"; };
+		D7C814661901C70F00B3CD0B /* halfMarathonButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halfMarathonButton.png; sourceTree = "<group>"; };
+		D7C814671901C70F00B3CD0B /* marathonButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marathonButton.png; sourceTree = "<group>"; };
+		D7C814681901C70F00B3CD0B /* sprintButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprintButton.png; sourceTree = "<group>"; };
+		D7C8146C1901C7F500B3CD0B /* gameModesView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameModesView.png; sourceTree = "<group>"; };
+		D7C8146E1902FFDB00B3CD0B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C8146F1902FFDB00B3CD0B /* iAd.framework in Frameworks */,
 				D76A7DF218F0B64100D35291 /* AVFoundation.framework in Frameworks */,
 				B50B247A18EC5A51006FC005 /* CoreData.framework in Frameworks */,
 				B5970EED18EB41B10096F6A3 /* CoreGraphics.framework in Frameworks */,
@@ -202,6 +213,7 @@
 		B5970EE918EB41B10096F6A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7C8146E1902FFDB00B3CD0B /* iAd.framework */,
 				D76A7DF118F0B64100D35291 /* AVFoundation.framework */,
 				B50B247918EC5A51006FC005 /* CoreData.framework */,
 				B5970EEA18EB41B10096F6A3 /* Foundation.framework */,
@@ -282,18 +294,22 @@
 		D7A262B118F4374300F12A75 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D788D37518FDBBF500317938 /* fastTapperScreen.png */,
 				B50B248618EDECBD006FC005 /* developerScreen.png */,
 				D7A262A118F4307E00F12A75 /* fastTapperButton.png */,
+				D788D37518FDBBF500317938 /* fastTapperScreen.png */,
+				D7C8146C1901C7F500B3CD0B /* gameModesView.png */,
+				D7C814661901C70F00B3CD0B /* halfMarathonButton.png */,
 				D7BC3E9618FC52C7009B6334 /* highScoresScreen.png */,
 				B50B248218EDE748006FC005 /* icon120x120.png */,
 				D7A262A218F4307E00F12A75 /* launchScreen.png */,
+				D7C814671901C70F00B3CD0B /* marathonButton.png */,
 				D7A262A318F4307E00F12A75 /* menuScreen.png */,
 				D7A262C618F4686700F12A75 /* player1TapButton.png */,
 				D7A262C718F4686700F12A75 /* player2TapButton.png */,
 				D788D37718FDEED600317938 /* resultsView.png */,
 				D7A262C418F45C6C00F12A75 /* scoresButton.png */,
 				D718130718F88A140043D339 /* settingsBtn.png */,
+				D7C814681901C70F00B3CD0B /* sprintButton.png */,
 				D7859D5918F49A00005EE4D7 /* startButton.png */,
 				D7859D5B18F4A152005EE4D7 /* tapButton.png */,
 				D7A262A518F4307E00F12A75 /* tapOffButton.png */,
@@ -392,6 +408,7 @@
 				D7A262C218F4592800F12A75 /* Museo-500.otf in Resources */,
 				D7A262AC18F4326B00F12A75 /* water-droplet-1.mp3 in Resources */,
 				B5970F0318EB41B10096F6A3 /* Images.xcassets in Resources */,
+				D7C8146D1901C7F500B3CD0B /* gameModesView.png in Resources */,
 				D788D37618FDBBF500317938 /* fastTapperScreen.png in Resources */,
 				D7A262C518F45C6C00F12A75 /* scoresButton.png in Resources */,
 				D7A262A618F4307E00F12A75 /* fastTapperButton.png in Resources */,
@@ -402,12 +419,15 @@
 				D722705D18F0A93E00BAEF80 /* beep-07.mp3 in Resources */,
 				B5970EF518EB41B10096F6A3 /* InfoPlist.strings in Resources */,
 				D7A262C318F4592A00F12A75 /* Museo-700.otf in Resources */,
+				D7C8146A1901C70F00B3CD0B /* marathonButton.png in Resources */,
 				D788D37818FDEED600317938 /* resultsView.png in Resources */,
 				D7A262B418F43C3F00F12A75 /* tapOffScreen.png in Resources */,
 				D7A262C918F4686700F12A75 /* player2TapButton.png in Resources */,
 				B50B248818EDECBD006FC005 /* developerScreen.png in Resources */,
 				D718130818F88A140043D339 /* settingsBtn.png in Resources */,
 				D7A262A718F4307E00F12A75 /* launchScreen.png in Resources */,
+				D7C8146B1901C70F00B3CD0B /* sprintButton.png in Resources */,
+				D7C814691901C70F00B3CD0B /* halfMarathonButton.png in Resources */,
 				D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */,
 				D7A262C118F4592600F12A75 /* Museo-300.otf in Resources */,
 				B5970EFE18EB41B10096F6A3 /* Main.storyboard in Resources */,

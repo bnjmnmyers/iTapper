@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface FastTapperViewController : UIViewController
+@interface FastTapperViewController : UIViewController <ADBannerViewDelegate>
 
 // CoreData Properties
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -25,6 +26,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnMenu;
 @property (strong, nonatomic) IBOutlet UIButton *btnSave;
 @property (strong, nonatomic) IBOutlet UIButton *btnClose;
+@property (strong, nonatomic) IBOutlet UIButton *btnCloseGameMode;
+@property (strong, nonatomic) IBOutlet ADBannerView *bannerView;
 
 @property (strong, nonatomic) IBOutlet UILabel *lblCounter;
 @property (strong, nonatomic) IBOutlet UILabel *lblCounterTitle;

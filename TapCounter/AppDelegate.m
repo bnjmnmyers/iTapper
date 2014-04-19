@@ -99,7 +99,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TapCounter.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"iTapper.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

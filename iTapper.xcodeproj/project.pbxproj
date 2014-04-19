@@ -59,6 +59,8 @@
 		D7C8146B1901C70F00B3CD0B /* sprintButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C814681901C70F00B3CD0B /* sprintButton.png */; };
 		D7C8146D1901C7F500B3CD0B /* gameModesView.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C8146C1901C7F500B3CD0B /* gameModesView.png */; };
 		D7C8146F1902FFDB00B3CD0B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C8146E1902FFDB00B3CD0B /* iAd.framework */; };
+		D7C8147219030DE100B3CD0B /* GlobalScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C8147119030DE100B3CD0B /* GlobalScore.m */; };
+		D7C8147519030DFA00B3CD0B /* GlobalScoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C8147419030DFA00B3CD0B /* GlobalScoreModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,10 @@
 		D7C814681901C70F00B3CD0B /* sprintButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprintButton.png; sourceTree = "<group>"; };
 		D7C8146C1901C7F500B3CD0B /* gameModesView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameModesView.png; sourceTree = "<group>"; };
 		D7C8146E1902FFDB00B3CD0B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		D7C8147019030DE100B3CD0B /* GlobalScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalScore.h; sourceTree = "<group>"; };
+		D7C8147119030DE100B3CD0B /* GlobalScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalScore.m; sourceTree = "<group>"; };
+		D7C8147319030DFA00B3CD0B /* GlobalScoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalScoreModel.h; sourceTree = "<group>"; };
+		D7C8147419030DFA00B3CD0B /* GlobalScoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalScoreModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,8 @@
 			children = (
 				D7904A4D1901661200DE850E /* CurrentUser.h */,
 				D7904A4E1901661200DE850E /* CurrentUser.m */,
+				D7C8147019030DE100B3CD0B /* GlobalScore.h */,
+				D7C8147119030DE100B3CD0B /* GlobalScore.m */,
 				D7BC3E9018FC2CD4009B6334 /* HighScore.h */,
 				D7BC3E9118FC2CD4009B6334 /* HighScore.m */,
 			);
@@ -181,10 +189,12 @@
 		B50B247B18EC5CB4006FC005 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B50B247C18EC5CE1006FC005 /* Score.h */,
-				B50B247D18EC5CE1006FC005 /* Score.m */,
 				D7904A50190166C800DE850E /* CurrentUserModel.h */,
 				D7904A51190166C800DE850E /* CurrentUserModel.m */,
+				D7C8147319030DFA00B3CD0B /* GlobalScoreModel.h */,
+				D7C8147419030DFA00B3CD0B /* GlobalScoreModel.m */,
+				B50B247C18EC5CE1006FC005 /* Score.h */,
+				B50B247D18EC5CE1006FC005 /* Score.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -449,7 +459,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C8147519030DFA00B3CD0B /* GlobalScoreModel.m in Sources */,
 				D7BC3E9218FC2CD4009B6334 /* HighScore.m in Sources */,
+				D7C8147219030DE100B3CD0B /* GlobalScore.m in Sources */,
 				B50B248118ED9CE8006FC005 /* TapOffViewController.m in Sources */,
 				B50B248C18EDEEAF006FC005 /* MenuViewController.m in Sources */,
 				B5970F0118EB41B10096F6A3 /* FastTapperViewController.m in Sources */,

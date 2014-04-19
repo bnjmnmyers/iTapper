@@ -582,6 +582,9 @@
                                     <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-nh-YJM">
                                         <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="W3s-jd-uow" id="DUQ-j3-4bf"/>
+                                        </connections>
                                     </adBannerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
@@ -844,6 +847,9 @@
                                     <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hij-kE-7Xn">
                                         <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="PdF-vd-So2"/>
+                                        </connections>
                                     </adBannerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>

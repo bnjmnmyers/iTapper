@@ -87,25 +87,25 @@
 	return _highScore;
 }
 
-- (NSArray *)queryData
-{
-	id delegate = [[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = [delegate managedObjectContext];
-	
-	_fetchRequest = [[NSFetchRequest alloc] init];
-	_entity = [NSEntityDescription entityForName:@"HighScore" inManagedObjectContext:[self managedObjectContext]];
-	_sort = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
-	_sortDescriptors = [[NSArray alloc]initWithObjects:_sort, nil];
-	
-	[_fetchRequest setEntity:_entity];
-	[_fetchRequest setSortDescriptors:_sortDescriptors];
-	
-	NSError *error = nil;
-	
-	_scoresArray = [[self managedObjectContext] executeFetchRequest:_fetchRequest error:&error];
-	
-	return _scoresArray;
-}
+//- (NSArray *)queryData
+//{
+//	id delegate = [[UIApplication sharedApplication] delegate];
+//    self.managedObjectContext = [delegate managedObjectContext];
+//	
+//	_fetchRequest = [[NSFetchRequest alloc] init];
+//	_entity = [NSEntityDescription entityForName:@"HighScore" inManagedObjectContext:[self managedObjectContext]];
+//	_sort = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
+//	_sortDescriptors = [[NSArray alloc]initWithObjects:_sort, nil];
+//	
+//	[_fetchRequest setEntity:_entity];
+//	[_fetchRequest setSortDescriptors:_sortDescriptors];
+//	
+//	NSError *error = nil;
+//	
+//	_scoresArray = [[self managedObjectContext] executeFetchRequest:_fetchRequest error:&error];
+//	
+//	return _scoresArray;
+//}
 
 
 - (NSArray *)queryDataWithPredicate:(NSString *)predicate

@@ -7,8 +7,11 @@
 //
 
 #import "MenuViewController.h"
+#import "GlobalScoreModel.h"
 
 @interface MenuViewController ()
+
+@property (strong, nonatomic) GlobalScoreModel *globalScoreModelInstance;
 
 @end
 
@@ -27,6 +30,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _globalScoreModelInstance = [[GlobalScoreModel alloc]init];
+    [_globalScoreModelInstance downloadGlobalScores];
 }
 
 - (void)didReceiveMemoryWarning

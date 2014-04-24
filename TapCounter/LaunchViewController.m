@@ -29,6 +29,15 @@
 	// Do any additional setup after loading the view.
     NSTimer *countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown:) userInfo:nil repeats:YES];
 	_timeTillSegue = 2;
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenHeight = screenSize.height;
+    
+    if (screenHeight < 568) {
+        _backgroundImageView.frame = CGRectMake(0, 0, 320, 480);
+        _backgroundImageView.image = [UIImage imageNamed:@"launchScreen640x960"];
+    }
 }
 
 - (void)countdown:(NSTimer *)timer

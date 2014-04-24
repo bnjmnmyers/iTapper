@@ -39,6 +39,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblTapsPerSecond;
 @property (strong, nonatomic) IBOutlet UILabel *lblViewControllerTitle;
 @property (strong, nonatomic) IBOutlet UITextField *tfUsername;
+@property (strong, nonatomic) IBOutlet UIView *vwGameModeCont;
+@property (strong, nonatomic) IBOutlet UIView *vwResultsCont;
 @property (strong, nonatomic) IBOutlet UIView *vwScore;
 @property (strong, nonatomic) IBOutlet UIView *vwSettings;
 

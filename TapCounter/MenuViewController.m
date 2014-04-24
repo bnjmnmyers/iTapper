@@ -33,6 +33,27 @@
     
     _globalScoreModelInstance = [[GlobalScoreModel alloc]init];
     [_globalScoreModelInstance downloadGlobalScores];
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenHeight = screenSize.height;
+    CGFloat screenWidth = screenSize.width;
+    
+    if (screenHeight < 568) {
+        NSLog(@"%f", screenWidth);
+        NSLog(@"%f", screenHeight);
+        _backgroundImageView.frame = CGRectMake(0, 0, 320, 480);
+        _backgroundImageView.image = [UIImage imageNamed:@"menuScreen640x960"];
+        [_backgroundImageView setContentMode:UIViewContentModeScaleAspectFit];
+        
+        _btnFastTapper.frame = CGRectMake(106, 350, 108, 46);
+        _btnTapOff.frame = CGRectMake(106, 409, 108, 46);
+        
+        NSLog(@"%f", _backgroundImageView.frame.size.height);
+        NSLog(@"%f", _backgroundImageView.frame.size.width);
+        NSLog(@"%f", _backgroundImageView.frame.origin.x);
+        NSLog(@"%f", _backgroundImageView.frame.origin.y);
+    }
 }
 
 - (void)didReceiveMemoryWarning

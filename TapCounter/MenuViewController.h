@@ -10,4 +10,8 @@
 
 @interface MenuViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (strong, nonatomic) IBOutlet UIButton *btnFastTapper;
+@property (strong, nonatomic) IBOutlet UIButton *btnTapOff;
+
 @end

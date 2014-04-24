@@ -26,7 +26,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblFinalScore;
 @property (strong, nonatomic) IBOutlet UIButton *btnStartTimer;
 @property (strong, nonatomic) IBOutlet UIButton *btnMenu;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UIView *vwResults;
+@property (strong, nonatomic) IBOutlet UIView *vwResultsCont;
 
 // Variable Properties
 @property (assign) int player1TapCount;

@@ -48,6 +48,28 @@
 	_btnPlayer2Tap.transform = CGAffineTransformMakeRotation(- M_PI_2/.5);
 	_btnPlayer1Tap.enabled = NO;
 	_btnPlayer2Tap.enabled = NO;
+    
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenHeight = screenSize.height;
+    
+    if (screenHeight < 568) {
+        _backgroundImageView.frame = CGRectMake(0, 0, 320, 480);
+        _backgroundImageView.image = [UIImage imageNamed:@"tapOffScreen640x960"];
+        [_backgroundImageView setContentMode:UIViewContentModeScaleAspectFit];
+        _vwResultsCont.frame = CGRectMake(20, 155, 280, 170);
+        _btnMenu.frame = CGRectMake(10, 226, 52, 30);
+        _btnStartTimer.frame = CGRectMake(264, 226, 52, 30);
+        _btnPlayer1Tap.frame = CGRectMake(60, 270, 200, 200);
+        _btnPlayer2Tap.frame = CGRectMake(60, 10, 200, 200);
+        _lblPlayer1Indicator.frame = CGRectMake(125, 350, 70, 40);
+        _lblPlayer2Indicator.frame = CGRectMake(125, 90, 70, 40);
+        _lblPlayer1Score.frame = CGRectMake(14, 184, 70, 21);
+        _lblPlayer2Score.frame = CGRectMake(236, 276, 70, 21);
+        _lblPlayer1Timer.frame = CGRectMake(14, 276, 20, 21);
+        _lblPlayer2Timer.frame = CGRectMake(286, 184, 20, 21);
+        _bannerView.frame = CGRectMake(0, 430, 320, 50);
+    }
 }
 
 - (BOOL)prefersStatusBarHidden{

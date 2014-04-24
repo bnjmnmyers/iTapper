@@ -28,6 +28,20 @@
 	id delegate = [[UIApplication sharedApplication] delegate];
 	self.managedObjectContext = [delegate managedObjectContext];
     
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenHeight = screenSize.height;
+    
+    if (screenHeight < 568) {
+        _btnTap.frame = CGRectMake(60, 236, 200, 200);
+        _btnStart.frame = CGRectMake(52, 280, 213, 109);
+        _lblHighScoreTitle.frame = CGRectMake(20, 440, 113, 21);
+        _lblHighScore.frame = CGRectMake(133, 440, 52, 21);
+        _vwGameModeCont.frame = CGRectMake(20, 155, 280, 170);
+        _vwResultsCont.frame = CGRectMake(20, 155, 280, 170);
+        _bannerView.frame = CGRectMake(0, 430, 320, 50);
+    }
+    
 	_scoreInstance = [[Score alloc]init];
     _currentUserModelInstance = [[CurrentUserModel alloc]init];
 	_tapCount = 0;

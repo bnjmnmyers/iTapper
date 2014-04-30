@@ -64,6 +64,8 @@
 		D7A262C518F45C6C00F12A75 /* scoresButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262C418F45C6C00F12A75 /* scoresButton.png */; };
 		D7A262C818F4686700F12A75 /* player1TapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262C618F4686700F12A75 /* player1TapButton.png */; };
 		D7A262C918F4686700F12A75 /* player2TapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A262C718F4686700F12A75 /* player2TapButton.png */; };
+		D7A5EA3B19112D7000DD722B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A5EA3A19112D7000DD722B /* Reachability.m */; };
+		D7A5EA3D19112F5300DD722B /* launchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7A5EA3C19112F5300DD722B /* launchScreen.png */; };
 		D7BC3E9218FC2CD4009B6334 /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC3E9118FC2CD4009B6334 /* HighScore.m */; };
 		D7BC3E9518FC2E62009B6334 /* HighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC3E9418FC2E62009B6334 /* HighScoresViewController.m */; };
 		D7BC3E9718FC52C7009B6334 /* highScoresScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7BC3E9618FC52C7009B6334 /* highScoresScreen.png */; };
@@ -156,6 +158,9 @@
 		D7A262C418F45C6C00F12A75 /* scoresButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoresButton.png; sourceTree = "<group>"; };
 		D7A262C618F4686700F12A75 /* player1TapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player1TapButton.png; sourceTree = "<group>"; };
 		D7A262C718F4686700F12A75 /* player2TapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2TapButton.png; sourceTree = "<group>"; };
+		D7A5EA3919112D7000DD722B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		D7A5EA3A19112D7000DD722B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D7A5EA3C19112F5300DD722B /* launchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen.png; sourceTree = "<group>"; };
 		D7BC3E9018FC2CD4009B6334 /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
 		D7BC3E9118FC2CD4009B6334 /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		D7BC3E9318FC2E61009B6334 /* HighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoresViewController.h; sourceTree = "<group>"; };
@@ -263,6 +268,7 @@
 		B5970EF018EB41B10096F6A3 /* TapCounter */ = {
 			isa = PBXGroup;
 			children = (
+				D7A5EA3819112D5E00DD722B /* Utilities */,
 				B50B247B18EC5CB4006FC005 /* Models */,
 				B50B247518EC53B1006FC005 /* Data */,
 				B5970EF918EB41B10096F6A3 /* AppDelegate.h */,
@@ -352,6 +358,7 @@
 		D7A262B118F4374300F12A75 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D7A5EA3C19112F5300DD722B /* launchScreen.png */,
 				D7204178190725E7008F512A /* 320x480 */,
 				D7204182190813E5008F512A /* 640x960 */,
 				B50B248618EDECBD006FC005 /* developerScreen.png */,
@@ -390,6 +397,15 @@
 				D7A262AB18F4326B00F12A75 /* water-droplet-1.mp3 */,
 			);
 			name = Music;
+			sourceTree = "<group>";
+		};
+		D7A5EA3819112D5E00DD722B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D7A5EA3919112D7000DD722B /* Reachability.h */,
+				D7A5EA3A19112D7000DD722B /* Reachability.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +522,7 @@
 				D7C814691901C70F00B3CD0B /* halfMarathonButton.png in Resources */,
 				D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */,
 				D720419019081936008F512A /* iTapperIcon29.png in Resources */,
+				D7A5EA3D19112F5300DD722B /* launchScreen.png in Resources */,
 				D7A262C118F4592600F12A75 /* Museo-300.otf in Resources */,
 				D7204187190813E5008F512A /* developerScreen640x960.png in Resources */,
 				B5970EFE18EB41B10096F6A3 /* Main.storyboard in Resources */,
@@ -537,6 +554,7 @@
 				B5970EFB18EB41B10096F6A3 /* AppDelegate.m in Sources */,
 				D7904A4F1901661200DE850E /* CurrentUser.m in Sources */,
 				B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */,
+				D7A5EA3B19112D7000DD722B /* Reachability.m in Sources */,
 				D7BC3E9518FC2E62009B6334 /* HighScoresViewController.m in Sources */,
 				B5970EF718EB41B10096F6A3 /* main.m in Sources */,
 				B50B247E18EC5CE1006FC005 /* Score.m in Sources */,

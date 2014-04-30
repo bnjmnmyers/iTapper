@@ -8,10 +8,14 @@
 
 #import "Score.h"
 #import "HighScore.h"
+#import "Reachability.h"
 
 #define webServiceSaveScore @"http://www.appguys.biz/JSON/iTapperJSON.php?key=weBeTappin"
 
 @interface Score ()
+{
+    Reachability *internetReachable;
+}
 
 @property (assign) NSString *highScore;
 @property (assign) NSNumber *lowestScoreNum;
@@ -65,10 +69,12 @@
 	}
     
     
-    NSString *urlString = [NSString stringWithFormat:@"%@&username=%@&score=%d&gameType=%@&country=%@", webServiceSaveScore, username, currentScore, gameType, countryCode];
-	NSLog(@"%@", urlString);
-	NSURL *url = [[NSURL alloc]initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-	NSData *data = [NSData dataWithContentsOfURL:url];
+    if (_isConnected) {
+        NSString *urlString = [NSString stringWithFormat:@"%@&username=%@&score=%d&gameType=%@&country=%@", webServiceSaveScore, username, currentScore, gameType, countryCode];
+        NSLog(@"%@", urlString);
+        NSURL *url = [[NSURL alloc]initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+    }
 	
 	[self.managedObjectContext save:nil];
 }
@@ -128,6 +134,27 @@
 	_scoresArray = [[self managedObjectContext] executeFetchRequest:_fetchRequest error:&error];
 	
 	return _scoresArray;
+}
+
+- (void) checkOnlineConnection {
+    
+    internetReachable = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Internet is not reachable
+    // NOTE - change "reachableBlock" to "unreachableBlock"
+    
+    internetReachable.unreachableBlock = ^(Reachability*reach)
+    {
+		_isConnected = FALSE;
+    };
+	
+	internetReachable.reachableBlock = ^(Reachability*reach)
+    {
+		_isConnected = TRUE;
+    };
+    
+    [internetReachable startNotifier];
+    
 }
 
 

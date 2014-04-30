@@ -19,6 +19,9 @@
 @property (strong, nonatomic) NSPredicate *predicate;
 @property (strong, nonatomic) NSArray *scoresArray;
 
+// Variable Properties
+@property (assign) BOOL isConnected;
+
 // Actions
 - (void)checkScores:(int)currentScore withGameType:(NSString *)gameType andUsername:(NSString *)username;
 - (NSString *)getHighScoreWithGameType:(NSString *)gameType;

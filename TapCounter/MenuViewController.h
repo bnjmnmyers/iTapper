@@ -10,8 +10,12 @@
 
 @interface MenuViewController : UIViewController
 
+// UI Properties
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UIButton *btnFastTapper;
 @property (strong, nonatomic) IBOutlet UIButton *btnTapOff;
+
+// Variable Properties
+@property (assign) BOOL isConnected;
 
 @end

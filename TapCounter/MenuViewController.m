@@ -8,8 +8,12 @@
 
 #import "MenuViewController.h"
 #import "GlobalScoreModel.h"
+#import "Reachability.h"
 
 @interface MenuViewController ()
+{
+    Reachability *internetReachable;
+}
 
 @property (strong, nonatomic) GlobalScoreModel *globalScoreModelInstance;
 
@@ -31,8 +35,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self checkOnlineConnection];
+    
     _globalScoreModelInstance = [[GlobalScoreModel alloc]init];
-    [_globalScoreModelInstance downloadGlobalScores];
+    
+    if (_isConnected) {
+        [_globalScoreModelInstance downloadGlobalScores];
+    }
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
@@ -65,6 +74,27 @@
 - (BOOL)prefersStatusBarHidden
 {
     return TRUE;
+}
+
+- (void) checkOnlineConnection {
+    
+    internetReachable = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Internet is not reachable
+    // NOTE - change "reachableBlock" to "unreachableBlock"
+    
+    internetReachable.unreachableBlock = ^(Reachability*reach)
+    {
+		_isConnected = FALSE;
+    };
+	
+	internetReachable.reachableBlock = ^(Reachability*reach)
+    {
+		_isConnected = TRUE;
+    };
+    
+    [internetReachable startNotifier];
+    
 }
 
 /*

@@ -79,6 +79,15 @@
     _gameLength = [sender tag];
     _lblTimer.text = [NSString stringWithFormat:@"%ld", (long)[sender tag]];
     
+    _isTimerInvalidateSet = true;
+    
+    [self countdown:_countdownTimer];
+    
+    _isTimerInvalidateSet = false;
+    
+    _btnStart.hidden = NO;
+    _btnTap.hidden = YES;
+    
     switch ([sender tag]) {
         case 10:
             _gameType = @"Sprint";
@@ -134,7 +143,7 @@
     _clock = _gameLength;
 	_tapCount = 0;
 	_lblCounter.text = @"0";
-	_lblTimer.text = [NSString stringWithFormat:@"%d", _clock];
+	_lblTimer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
 	_isTimerStarted = YES;
 	_btnStart.hidden = YES;
     _btnTap.hidden = NO;
@@ -145,14 +154,14 @@
 - (void)countdown:(NSTimer *)timer
 {
     // Invalidate timer if going back to menu
-    if( _isTimerInvalidateSet )
+    if(_isTimerInvalidateSet)
     {
         [timer invalidate];
         return;
     }
     
 	[self setClock:(_clock -1)];
-	_lblTimer.text = [NSString stringWithFormat:@"%d", _clock];
+	_lblTimer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
     if (_clock <= 3) {
         [self playAudio];
     }
@@ -170,7 +179,8 @@
 
 - (IBAction)gotoMenu:(id)sender {
     _isTimerInvalidateSet = true;
-    [ self countdown:_countdownTimer ] ; // theTimerInstance is same as earlier you passed to `moveStickFig`
+    
+    [self countdown:_countdownTimer];
     
     _isTimerInvalidateSet = false;
 }
@@ -213,6 +223,11 @@
     else {
         NSLog(@"error, file not found: %@", path);
     }
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    _bannerView.hidden = YES;
 }
 
 

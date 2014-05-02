@@ -114,8 +114,8 @@
 	_clock = 10;
 	_lblPlayer1Score.text = @"0";
 	_lblPlayer2Score.text = @"0";
-	_lblPlayer1Timer.text = [NSString stringWithFormat:@"%d", _clock];
-	_lblPlayer2Timer.text = [NSString stringWithFormat:@"%d", _clock];
+	_lblPlayer1Timer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
+	_lblPlayer2Timer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
 	_isTimerStarted = YES;
 	_btnPlayer1Tap.enabled = YES;
 	_btnPlayer2Tap.enabled = YES;
@@ -135,8 +135,8 @@
     }
     
 	[self setClock:(_clock -1)];
-	_lblPlayer1Timer.text = [NSString stringWithFormat:@"%d", _clock];
-	_lblPlayer2Timer.text = [NSString stringWithFormat:@"%d", _clock];
+	_lblPlayer1Timer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
+	_lblPlayer2Timer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
     if (_clock <= 3) {
         [self playAudio];
     }
@@ -195,6 +195,11 @@
     else {
         NSLog(@"error, file not found: %@", path);
     }
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    _bannerView.hidden = YES;
 }
 
 @end

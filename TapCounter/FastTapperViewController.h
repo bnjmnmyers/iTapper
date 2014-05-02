@@ -45,8 +45,8 @@
 @property (strong, nonatomic) IBOutlet UIView *vwSettings;
 
 // Variable Properties
-@property (assign) int clock;
-@property (assign) int gameLength;
+@property (assign) NSUInteger clock;
+@property (assign) NSUInteger gameLength;
 @property (assign) int tapCount;
 @property (assign) float tapsPerSecond;
 @property (assign) BOOL isTimerStarted;

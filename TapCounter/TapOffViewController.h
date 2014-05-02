@@ -33,7 +33,7 @@
 // Variable Properties
 @property (assign) int player1TapCount;
 @property (assign) int player2TapCount;
-@property (assign) int clock;
+@property (assign) NSUInteger clock;
 @property (assign) BOOL isTimerStarted;
 @property (assign) BOOL isTimerInvalidateSet;
 @property (assign) UIFont *museoFont;

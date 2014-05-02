@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "GlobalScoreModel.h"
 #import "Reachability.h"
+#import "GameKitHelper.h"
 
 @interface MenuViewController ()
 {
@@ -65,10 +66,39 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(showAuthenticationViewController)
+     name:PresentAuthenticationViewController
+     object:nil];
+    
+    [[GameKitHelper sharedGameKitHelper]
+     authenticateLocalPlayer];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)showAuthenticationViewController
+{
+    GameKitHelper *gameKitHelper =
+    [GameKitHelper sharedGameKitHelper];
+    
+    [self presentViewController:
+     gameKitHelper.authenticationViewController
+                                         animated:YES
+                                       completion:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (BOOL)prefersStatusBarHidden

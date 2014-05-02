@@ -109,6 +109,7 @@
 
 - (IBAction)startTimer:(id)sender
 {
+    _bannerView.hidden = NO;
 	_player1TapCount = 0;
 	_player2TapCount = 0;
 	_clock = 10;

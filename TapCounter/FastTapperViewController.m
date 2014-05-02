@@ -137,6 +137,7 @@
 
 - (IBAction)startTimer:(id)sender
 {
+    _bannerView.hidden = NO;
     if (![_username isEqualToString:@" "]) {
         _tfUsername.text = _username;
     }

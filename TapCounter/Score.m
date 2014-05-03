@@ -9,8 +9,13 @@
 #import "Score.h"
 #import "HighScore.h"
 #import "Reachability.h"
+#import <GameKit/GameKit.h>
+#import "GameKitHelper.h"
 
 #define webServiceSaveScore @"http://www.appguys.biz/JSON/iTapperJSON.php?key=weBeTappin"
+#define SPRINT_LEADER_BOARD_ID @"iTapper1"
+#define HALFMARATHON_LEADER_BOARD_ID @"iTapper2"
+#define MARATHON_LEADER_BOARD_ID @"iTapper3"
 
 @interface Score ()
 {
@@ -74,6 +79,36 @@
         NSLog(@"%@", urlString);
         NSURL *url = [[NSURL alloc]initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         NSData *data = [NSData dataWithContentsOfURL:url];
+    }
+    
+    if ([GKLocalPlayer localPlayer].isAuthenticated) {
+        if ([gameType isEqualToString:@"Sprint"]) {
+            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:SPRINT_LEADER_BOARD_ID];
+            score.value = currentScore;
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if (error) {
+                    // handle error
+                }
+            }];
+        }
+        else if ([gameType isEqualToString:@"Half-Marathon"])
+        {
+            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:HALFMARATHON_LEADER_BOARD_ID];
+            score.value = currentScore;
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if (error) {
+                    // handle error
+                }
+            }];
+        } else {
+            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:MARATHON_LEADER_BOARD_ID];
+            score.value = currentScore;
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if (error) {
+                    // handle error
+                }
+            }];
+        }
     }
 	
 	[self.managedObjectContext save:nil];

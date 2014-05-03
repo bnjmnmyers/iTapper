@@ -45,6 +45,8 @@
 		D720419419081936008F512A /* iTapperIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = D720418F19081936008F512A /* iTapperIcon114.png */; };
 		D722705D18F0A93E00BAEF80 /* beep-07.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D722705C18F0A93E00BAEF80 /* beep-07.mp3 */; };
 		D72E11B318F0C6F400B4F1E0 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */; };
+		D7477569191315C0003D49F5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7477568191315C0003D49F5 /* GameKit.framework */; };
+		D747756D191315F9003D49F5 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D747756C191315F9003D49F5 /* GameKitHelper.m */; };
 		D76A7DF218F0B64100D35291 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76A7DF118F0B64100D35291 /* AVFoundation.framework */; };
 		D7859D5A18F49A00005EE4D7 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7859D5918F49A00005EE4D7 /* startButton.png */; };
 		D7859D5C18F4A152005EE4D7 /* tapButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7859D5B18F4A152005EE4D7 /* tapButton.png */; };
@@ -137,6 +139,9 @@
 		D722705C18F0A93E00BAEF80 /* beep-07.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-07.mp3"; sourceTree = "<group>"; };
 		D72E11B118F0C6F400B4F1E0 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		D72E11B218F0C6F400B4F1E0 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		D7477568191315C0003D49F5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		D747756B191315F9003D49F5 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameKitHelper.h; sourceTree = "<group>"; };
+		D747756C191315F9003D49F5 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameKitHelper.m; sourceTree = "<group>"; };
 		D76A7DF118F0B64100D35291 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D7859D5918F49A00005EE4D7 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
 		D7859D5B18F4A152005EE4D7 /* tapButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapButton.png; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			files = (
 				D7C8146F1902FFDB00B3CD0B /* iAd.framework in Frameworks */,
 				D76A7DF218F0B64100D35291 /* AVFoundation.framework in Frameworks */,
+				D7477569191315C0003D49F5 /* GameKit.framework in Frameworks */,
 				B50B247A18EC5A51006FC005 /* CoreData.framework in Frameworks */,
 				B5970EED18EB41B10096F6A3 /* CoreGraphics.framework in Frameworks */,
 				B5970EEF18EB41B10096F6A3 /* UIKit.framework in Frameworks */,
@@ -254,6 +260,7 @@
 		B5970EE918EB41B10096F6A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7477568191315C0003D49F5 /* GameKit.framework */,
 				D7C8146E1902FFDB00B3CD0B /* iAd.framework */,
 				D76A7DF118F0B64100D35291 /* AVFoundation.framework */,
 				B50B247918EC5A51006FC005 /* CoreData.framework */,
@@ -268,6 +275,7 @@
 		B5970EF018EB41B10096F6A3 /* TapCounter */ = {
 			isa = PBXGroup;
 			children = (
+				D747756A191315E8003D49F5 /* GameKit */,
 				D7A5EA3819112D5E00DD722B /* Utilities */,
 				B50B247B18EC5CB4006FC005 /* Models */,
 				B50B247518EC53B1006FC005 /* Data */,
@@ -343,6 +351,15 @@
 				D7204186190813E5008F512A /* tapOffScreen640x960.png */,
 			);
 			path = 640x960;
+			sourceTree = "<group>";
+		};
+		D747756A191315E8003D49F5 /* GameKit */ = {
+			isa = PBXGroup;
+			children = (
+				D747756B191315F9003D49F5 /* GameKitHelper.h */,
+				D747756C191315F9003D49F5 /* GameKitHelper.m */,
+			);
+			name = GameKit;
 			sourceTree = "<group>";
 		};
 		D7A262B018F4373900F12A75 /* Fonts */ = {
@@ -455,6 +472,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = appguys.biz;
 				TargetAttributes = {
+					B5970EE618EB41B10096F6A3 = {
+						DevelopmentTeam = 7M8NZ564F4;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					B5970F0718EB41B10096F6A3 = {
 						TestTargetID = B5970EE618EB41B10096F6A3;
 					};
@@ -554,6 +579,7 @@
 				B5970EFB18EB41B10096F6A3 /* AppDelegate.m in Sources */,
 				D7904A4F1901661200DE850E /* CurrentUser.m in Sources */,
 				B50B247118EC535D006FC005 /* Model.xcdatamodeld in Sources */,
+				D747756D191315F9003D49F5 /* GameKitHelper.m in Sources */,
 				D7A5EA3B19112D7000DD722B /* Reachability.m in Sources */,
 				D7BC3E9518FC2E62009B6334 /* HighScoresViewController.m in Sources */,
 				B5970EF718EB41B10096F6A3 /* main.m in Sources */,
@@ -685,11 +711,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapCounter/iTapper-Prefix.pch";
 				INFOPLIST_FILE = "TapCounter/iTapper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = iTapper;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -700,11 +729,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapCounter/iTapper-Prefix.pch";
 				INFOPLIST_FILE = "TapCounter/iTapper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = iTapper;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

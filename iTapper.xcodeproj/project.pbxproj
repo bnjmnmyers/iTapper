@@ -715,7 +715,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapCounter/iTapper-Prefix.pch";
-				INFOPLIST_FILE = "TapCounter/iTapper-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TapCounter/iTapper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = iTapper;
 				PROVISIONING_PROFILE = "";
@@ -733,7 +733,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TapCounter/iTapper-Prefix.pch";
-				INFOPLIST_FILE = "TapCounter/iTapper-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TapCounter/iTapper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = iTapper;
 				PROVISIONING_PROFILE = "";

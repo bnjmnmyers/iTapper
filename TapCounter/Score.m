@@ -25,6 +25,7 @@
 @property (assign) NSString *highScore;
 @property (assign) NSNumber *lowestScoreNum;
 @property (strong, nonatomic) HighScore *lowestScore;
+@property (strong, nonatomic) GameKitHelper *gameKitHelperInstance;
 
 @end
 
@@ -79,36 +80,10 @@
         NSLog(@"%@", urlString);
         NSURL *url = [[NSURL alloc]initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         NSData *data = [NSData dataWithContentsOfURL:url];
-    }
-    
-    if ([GKLocalPlayer localPlayer].isAuthenticated) {
-        if ([gameType isEqualToString:@"Sprint"]) {
-            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:SPRINT_LEADER_BOARD_ID];
-            score.value = currentScore;
-            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
-                if (error) {
-                    // handle error
-                }
-            }];
-        }
-        else if ([gameType isEqualToString:@"Half-Marathon"])
-        {
-            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:HALFMARATHON_LEADER_BOARD_ID];
-            score.value = currentScore;
-            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
-                if (error) {
-                    // handle error
-                }
-            }];
-        } else {
-            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:MARATHON_LEADER_BOARD_ID];
-            score.value = currentScore;
-            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
-                if (error) {
-                    // handle error
-                }
-            }];
-        }
+        
+        
+        _gameKitHelperInstance = [[GameKitHelper alloc] init];
+        [_gameKitHelperInstance saveHighScoreToGameCenter:currentScore byGameType:gameType];
     }
 	
 	[self.managedObjectContext save:nil];
@@ -120,6 +95,11 @@
 	if ([_scoresArray count] > 0) {
 		HighScore *highScoreObj = [_scoresArray objectAtIndex:0];
 		_highScore = [NSString stringWithFormat:@"%@", highScoreObj.score];
+        int highScoreInt = [_highScore intValue];
+        if (_isConnected) {
+            _gameKitHelperInstance = [[GameKitHelper alloc] init];
+            [_gameKitHelperInstance saveHighScoreToGameCenter:highScoreInt byGameType:gameType];
+        }
 		
 	} else {
 		_highScore = @"0";

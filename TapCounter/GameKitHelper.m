@@ -8,6 +8,11 @@
 
 #import "GameKitHelper.h"
 
+
+#define SPRINT_LEADER_BOARD_ID @"iTapper1"
+#define HALFMARATHON_LEADER_BOARD_ID @"iTapper2"
+#define MARATHON_LEADER_BOARD_ID @"iTapper3"
+
 NSString *const PresentAuthenticationViewController = @"present_authentication_view_controller";
 
 @implementation GameKitHelper {
@@ -74,6 +79,39 @@ NSString *const PresentAuthenticationViewController = @"present_authentication_v
     if (_lastError) {
         NSLog(@"GameKitHelper ERROR: %@",
               [[_lastError userInfo] description]);
+    }
+}
+
+- (void)saveHighScoreToGameCenter:(int)currentScore byGameType:(NSString *)gameType
+{
+    if ([GKLocalPlayer localPlayer].isAuthenticated) {
+        if ([gameType isEqualToString:@"Sprint"]) {
+            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:SPRINT_LEADER_BOARD_ID];
+            score.value = currentScore;
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if (error) {
+                    // handle error
+                }
+            }];
+        }
+        else if ([gameType isEqualToString:@"Half-Marathon"])
+        {
+            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:HALFMARATHON_LEADER_BOARD_ID];
+            score.value = currentScore;
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if (error) {
+                    // handle error
+                }
+            }];
+        } else {
+            GKScore* score = [[GKScore alloc] initWithLeaderboardIdentifier:MARATHON_LEADER_BOARD_ID];
+            score.value = currentScore;
+            [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+                if (error) {
+                    // handle error
+                }
+            }];
+        }
     }
 }
 

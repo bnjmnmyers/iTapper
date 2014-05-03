@@ -19,5 +19,6 @@ extern NSString *const PresentAuthenticationViewController;
 
 + (instancetype)sharedGameKitHelper;
 - (void)authenticateLocalPlayer;
+- (void)saveHighScoreToGameCenter:(int)currentScore byGameType:(NSString *)gameType;
 
 @end

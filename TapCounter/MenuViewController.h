@@ -15,7 +15,4 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnFastTapper;
 @property (strong, nonatomic) IBOutlet UIButton *btnTapOff;
 
-// Variable Properties
-@property (assign) BOOL isConnected;
-
 @end

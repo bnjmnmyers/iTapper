@@ -41,6 +41,8 @@
 {
 	id delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [delegate managedObjectContext];
+    
+
 	
 	NSNumber *currentScoreNum = [NSNumber numberWithInt:currentScore];
     NSLocale *currentLocale = [NSLocale currentLocale];  // get the current locale.
@@ -73,17 +75,13 @@
 		newTop10Score.username = username;
 		newTop10Score.score = currentScoreNum;
 	}
-    
-    
-    if (_isConnected) {
+    if ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWiFi || [[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN) {
         NSString *urlString = [NSString stringWithFormat:@"%@&username=%@&score=%d&gameType=%@&country=%@", webServiceSaveScore, username, currentScore, gameType, countryCode];
         NSLog(@"%@", urlString);
         NSURL *url = [[NSURL alloc]initWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         NSData *data = [NSData dataWithContentsOfURL:url];
-        
-        
-        _gameKitHelperInstance = [[GameKitHelper alloc] init];
-        [_gameKitHelperInstance saveHighScoreToGameCenter:currentScore byGameType:gameType];
+    }else{
+        NSLog(@"Not Connected");
     }
 	
 	[self.managedObjectContext save:nil];
@@ -92,11 +90,13 @@
 - (NSString *)getHighScoreWithGameType:(NSString *)gameType
 {
 	[self queryDataWithPredicate:gameType];
+    
 	if ([_scoresArray count] > 0) {
 		HighScore *highScoreObj = [_scoresArray objectAtIndex:0];
 		_highScore = [NSString stringWithFormat:@"%@", highScoreObj.score];
         int highScoreInt = [_highScore intValue];
-        if (_isConnected) {
+        
+        if ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWiFi || [[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN) {
             _gameKitHelperInstance = [[GameKitHelper alloc] init];
             [_gameKitHelperInstance saveHighScoreToGameCenter:highScoreInt byGameType:gameType];
         }
@@ -150,27 +150,5 @@
 	
 	return _scoresArray;
 }
-
-- (void) checkOnlineConnection {
-    
-    internetReachable = [Reachability reachabilityWithHostname:@"www.google.com"];
-    
-    // Internet is not reachable
-    // NOTE - change "reachableBlock" to "unreachableBlock"
-    
-    internetReachable.unreachableBlock = ^(Reachability*reach)
-    {
-		_isConnected = FALSE;
-    };
-	
-	internetReachable.reachableBlock = ^(Reachability*reach)
-    {
-		_isConnected = TRUE;
-    };
-    
-    [internetReachable startNotifier];
-    
-}
-
 
 @end

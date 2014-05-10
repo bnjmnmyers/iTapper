@@ -100,6 +100,7 @@ typedef void (^NetworkUnreachable)(Reachability * reachability);
 -(BOOL)isConnectionOnDemand;
 // Is user intervention required?
 -(BOOL)isInterventionRequired;
+-(BOOL) setConnectionSatus:(int)status;
 
 -(NetworkStatus)currentReachabilityStatus;
 -(SCNetworkReachabilityFlags)reachabilityFlags;

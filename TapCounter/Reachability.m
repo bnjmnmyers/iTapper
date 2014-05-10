@@ -524,4 +524,9 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     return description;
 }
 
+-(BOOL) setConnectionSatus:(int)status
+{
+    return status;
+}
+
 @end

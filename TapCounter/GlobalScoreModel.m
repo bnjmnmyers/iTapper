@@ -28,7 +28,7 @@
 	NSDictionary *feed = [allDataDictionary objectForKey:@"feed"];
 	NSDictionary *globalScoresDictionary = [feed objectForKey:@"globalScores"];
     NSDictionary *globalSprintScoresDictionary = [globalScoresDictionary objectForKey:@"sprint"];
-    NSDictionary *globalHalfMarathonScoresDictionary = [globalScoresDictionary objectForKey:@"half-marathon"];
+    NSDictionary *globalHalfMarathonScoresDictionary = [globalScoresDictionary objectForKey:@"half-marathon "];
     NSDictionary *globalMarathonScoresDictionary = [globalScoresDictionary objectForKey:@"marathon"];
     
     for (NSDictionary *diction in globalSprintScoresDictionary) {

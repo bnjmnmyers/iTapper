@@ -30,10 +30,6 @@
 		B5970F1618EB41B10096F6A3 /* TapCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F1518EB41B10096F6A3 /* TapCounterTests.m */; };
 		B5970F2118EB48C50096F6A3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5970F2018EB48C50096F6A3 /* MainViewController.m */; };
 		D718130818F88A140043D339 /* settingsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = D718130718F88A140043D339 /* settingsBtn.png */; };
-		D7204176190725C0008F512A /* menuScreen320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = D7204175190725C0008F512A /* menuScreen320x480.png */; };
-		D720417D190800C9008F512A /* tapOffScreen320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = D720417C190800C9008F512A /* tapOffScreen320x480.png */; };
-		D720418019080FD1008F512A /* developerScreen320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = D720417E19080FD1008F512A /* developerScreen320x480.png */; };
-		D720418119080FD1008F512A /* launchScreen320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = D720417F19080FD1008F512A /* launchScreen320x480.png */; };
 		D7204187190813E5008F512A /* developerScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = D7204183190813E5008F512A /* developerScreen640x960.png */; };
 		D7204188190813E5008F512A /* launchScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = D7204184190813E5008F512A /* launchScreen640x960.png */; };
 		D7204189190813E5008F512A /* menuScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = D7204185190813E5008F512A /* menuScreen640x960.png */; };
@@ -123,10 +119,6 @@
 		B5970F1F18EB48C50096F6A3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		B5970F2018EB48C50096F6A3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D718130718F88A140043D339 /* settingsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsBtn.png; sourceTree = "<group>"; };
-		D7204175190725C0008F512A /* menuScreen320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuScreen320x480.png; sourceTree = "<group>"; };
-		D720417C190800C9008F512A /* tapOffScreen320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapOffScreen320x480.png; sourceTree = "<group>"; };
-		D720417E19080FD1008F512A /* developerScreen320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = developerScreen320x480.png; sourceTree = "<group>"; };
-		D720417F19080FD1008F512A /* launchScreen320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen320x480.png; sourceTree = "<group>"; };
 		D7204183190813E5008F512A /* developerScreen640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = developerScreen640x960.png; sourceTree = "<group>"; };
 		D7204184190813E5008F512A /* launchScreen640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen640x960.png; sourceTree = "<group>"; };
 		D7204185190813E5008F512A /* menuScreen640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuScreen640x960.png; sourceTree = "<group>"; };
@@ -331,17 +323,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D7204178190725E7008F512A /* 320x480 */ = {
-			isa = PBXGroup;
-			children = (
-				D720417E19080FD1008F512A /* developerScreen320x480.png */,
-				D720417F19080FD1008F512A /* launchScreen320x480.png */,
-				D7204175190725C0008F512A /* menuScreen320x480.png */,
-				D720417C190800C9008F512A /* tapOffScreen320x480.png */,
-			);
-			name = 320x480;
-			sourceTree = "<group>";
-		};
 		D7204182190813E5008F512A /* 640x960 */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				D7A5EA3C19112F5300DD722B /* launchScreen.png */,
-				D7204178190725E7008F512A /* 320x480 */,
 				D7204182190813E5008F512A /* 640x960 */,
 				B50B248618EDECBD006FC005 /* developerScreen.png */,
 				D7A262A118F4307E00F12A75 /* fastTapperButton.png */,
@@ -512,7 +492,6 @@
 				D7859D5A18F49A00005EE4D7 /* startButton.png in Resources */,
 				D7A262A818F4307E00F12A75 /* menuScreen.png in Resources */,
 				D720419419081936008F512A /* iTapperIcon114.png in Resources */,
-				D7204176190725C0008F512A /* menuScreen320x480.png in Resources */,
 				D7A262C218F4592800F12A75 /* Museo-500.otf in Resources */,
 				D7A262AC18F4326B00F12A75 /* water-droplet-1.mp3 in Resources */,
 				B5970F0318EB41B10096F6A3 /* Images.xcassets in Resources */,
@@ -526,7 +505,6 @@
 				B50B248318EDE748006FC005 /* icon120x120.png in Resources */,
 				D7A262C818F4686700F12A75 /* player1TapButton.png in Resources */,
 				D7A262AA18F4307E00F12A75 /* tapOffButton.png in Resources */,
-				D720418119080FD1008F512A /* launchScreen320x480.png in Resources */,
 				D722705D18F0A93E00BAEF80 /* beep-07.mp3 in Resources */,
 				D720419319081936008F512A /* iTapperIcon80.png in Resources */,
 				D7204188190813E5008F512A /* launchScreen640x960.png in Resources */,
@@ -537,11 +515,9 @@
 				D720419119081936008F512A /* iTapperIcon57.png in Resources */,
 				D788D37818FDEED600317938 /* resultsView.png in Resources */,
 				D7A262B418F43C3F00F12A75 /* tapOffScreen.png in Resources */,
-				D720418019080FD1008F512A /* developerScreen320x480.png in Resources */,
 				D7A262C918F4686700F12A75 /* player2TapButton.png in Resources */,
 				B50B248818EDECBD006FC005 /* developerScreen.png in Resources */,
 				D718130818F88A140043D339 /* settingsBtn.png in Resources */,
-				D720417D190800C9008F512A /* tapOffScreen320x480.png in Resources */,
 				D7A262A718F4307E00F12A75 /* launchScreen-568h.png in Resources */,
 				D7C8146B1901C70F00B3CD0B /* sprintButton.png in Resources */,
 				D7C814691901C70F00B3CD0B /* halfMarathonButton.png in Resources */,

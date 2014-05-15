@@ -17,10 +17,9 @@
 @property (strong, nonatomic) NSMutableArray *sort;
 @property (strong, nonatomic) NSArray *sortDescriptors;
 @property (strong, nonatomic) NSPredicate *predicate;
-@property (strong, nonatomic) NSArray *scoresArray;
 
 // Variable Properties
-@property (assign) BOOL isConnected;
+@property (strong, nonatomic) NSArray *scoresArray;
 
 // Actions
 - (void)checkScores:(int)currentScore withGameType:(NSString *)gameType andUsername:(NSString *)username;

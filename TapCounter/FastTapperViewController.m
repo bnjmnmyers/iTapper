@@ -32,6 +32,7 @@
     CGSize screenSize = screenBound.size;
     CGFloat screenHeight = screenSize.height;
     
+    // If user's device is a 3.5" device adjust size and position of UI elements
     if (screenHeight < 568) {
         _btnTap.frame = CGRectMake(60, 236, 200, 200);
         _btnStart.frame = CGRectMake(52, 280, 213, 109);
@@ -41,6 +42,7 @@
         _vwResultsCont.frame = CGRectMake(20, 155, 280, 170);
         _bannerView.frame = CGRectMake(0, 430, 320, 50);
     }
+    
     
 	_scoreInstance = [[Score alloc]init];
     _currentUserModelInstance = [[CurrentUserModel alloc]init];
@@ -62,9 +64,6 @@
 	return YES;
 }
 
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//}
 - (IBAction)playerTap:(id)sender
 {
 	if (_isTimerStarted) {
@@ -75,19 +74,26 @@
 
 - (IBAction)changeGameType:(id)sender
 {
+    // Game mode buttons have a tag assigned to them that is equivalent to the amount of time for the game
+    // Set the clock and game length equal to the tag associated with the game mode button.
     _clock = [sender tag];
     _gameLength = [sender tag];
     _lblTimer.text = [NSString stringWithFormat:@"%ld", (long)[sender tag]];
     
+    // Set flag to reset clock if a new game mode is chosen.
     _isTimerInvalidateSet = true;
     
+    // Start the countdown
     [self countdown:_countdownTimer];
     
     _isTimerInvalidateSet = false;
     
+    // Hide the start button and show the tap button
     _btnStart.hidden = NO;
     _btnTap.hidden = YES;
     
+    // Pass in the game mode and send to Scores Model to get the high score for the current gameType
+    // Set the high score accordingly
     switch ([sender tag]) {
         case 10:
             _gameType = @"Sprint";
@@ -141,6 +147,8 @@
     if (![_username isEqualToString:@" "]) {
         _tfUsername.text = _username;
     }
+    
+    // Set up new game
     _clock = _gameLength;
 	_tapCount = 0;
 	_lblCounter.text = @"0";
@@ -161,11 +169,16 @@
         return;
     }
     
+    // Refresh the timer label as time ticks off
 	[self setClock:(_clock -1)];
 	_lblTimer.text = [NSString stringWithFormat:@"%lu", (unsigned long)_clock];
+    
+    // Signal user that the game is ending soon
     if (_clock <= 3) {
         [self playAudio];
     }
+    
+    // Game ended
 	if (_clock <= 0) {
 		[timer invalidate];
         _tfUsername.text = [_currentUserModelInstance getCurrentUser];
@@ -200,12 +213,19 @@
 
 - (IBAction)saveScore:(id)sender
 {
+    // Save the most recently entered username in order to prepopulate the username field later
     [_currentUserModelInstance saveCurrentUser:_tfUsername.text];
     _username = _tfUsername.text;
-	[_scoreInstance checkScores:_tapCount withGameType:_gameType andUsername:_username];
-	_vwScore.hidden = YES;
+	
+    // Send the score, gameType and username of finished game to Score Model
+    [_scoreInstance checkScores:_tapCount withGameType:_gameType andUsername:_username];
+	
+    // Display score screen
+    _vwScore.hidden = YES;
     _btnStart.hidden = NO;
-	_lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
+	
+    // Update high score label if a new record has been set.
+    _lblHighScore.text = [_scoreInstance getHighScoreWithGameType:_gameType];
     [_tfUsername resignFirstResponder];
 }
 

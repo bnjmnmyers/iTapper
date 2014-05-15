@@ -13,9 +13,6 @@
 #import "GameKitHelper.h"
 
 #define webServiceSaveScore @"http://www.appguys.biz/JSON/iTapperJSON.php?key=weBeTappin"
-#define SPRINT_LEADER_BOARD_ID @"iTapper1"
-#define HALFMARATHON_LEADER_BOARD_ID @"iTapper2"
-#define MARATHON_LEADER_BOARD_ID @"iTapper3"
 
 @interface Score ()
 {
@@ -42,12 +39,11 @@
 	id delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [delegate managedObjectContext];
     
-
-	
 	NSNumber *currentScoreNum = [NSNumber numberWithInt:currentScore];
     NSLocale *currentLocale = [NSLocale currentLocale];  // get the current locale.
     NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
     
+    // If 10 scores have been saved then grab the lowest score for comparison with the most recent score
 	if ([_scoresArray count] >= 10) {
 		_lowestScore = [_scoresArray objectAtIndex:9];
 		_lowestScoreNum = _lowestScore.score;
@@ -62,19 +58,15 @@
         newScore.gameType = gameType;
         newScore.country = countryCode;
 	}
-	
 	// If thew new score is higher than a previous score then replace the lowest score with the current score
 	else if ([_scoresArray count] >= 10 && currentScoreNum > _lowestScoreNum){
 		HighScore *newTop10Score = [_scoresArray objectAtIndex:9];
 		
-//		for (int x = 0; x < [_scoresArray count] - 1; x++) {
-//			HighScore *score = [_scoresArray objectAtIndex:x];
-//			NSLog(@"%@", score.score);
-//		}
-		
 		newTop10Score.username = username;
 		newTop10Score.score = currentScoreNum;
 	}
+    
+    // If the user is connected to the interet save their score to AppGuys:iTapper database.
     if ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWiFi || [[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN) {
         NSString *urlString = [NSString stringWithFormat:@"%@&username=%@&score=%d&gameType=%@&country=%@", webServiceSaveScore, username, currentScore, gameType, countryCode];
         NSLog(@"%@", urlString);
@@ -84,18 +76,22 @@
         NSLog(@"Not Connected");
     }
 	
+    // Save scores to CoreData
 	[self.managedObjectContext save:nil];
 }
 
 - (NSString *)getHighScoreWithGameType:(NSString *)gameType
 {
+    // Grab the scores for the current gameType
 	[self queryDataWithPredicate:gameType];
     
+    // If the number of saved scores is greater than 0 get the highest score
 	if ([_scoresArray count] > 0) {
 		HighScore *highScoreObj = [_scoresArray objectAtIndex:0];
 		_highScore = [NSString stringWithFormat:@"%@", highScoreObj.score];
         int highScoreInt = [_highScore intValue];
         
+        // If the user is connected save the score to GameCenter
         if ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWiFi || [[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN) {
             _gameKitHelperInstance = [[GameKitHelper alloc] init];
             [_gameKitHelperInstance saveHighScoreToGameCenter:highScoreInt byGameType:gameType];
@@ -105,35 +101,16 @@
 		_highScore = @"0";
 	}
 	
+    // Return the highest saved score for to be displayed on the UI
 	return _highScore;
 }
-
-//- (NSArray *)queryData
-//{
-//	id delegate = [[UIApplication sharedApplication] delegate];
-//    self.managedObjectContext = [delegate managedObjectContext];
-//	
-//	_fetchRequest = [[NSFetchRequest alloc] init];
-//	_entity = [NSEntityDescription entityForName:@"HighScore" inManagedObjectContext:[self managedObjectContext]];
-//	_sort = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
-//	_sortDescriptors = [[NSArray alloc]initWithObjects:_sort, nil];
-//	
-//	[_fetchRequest setEntity:_entity];
-//	[_fetchRequest setSortDescriptors:_sortDescriptors];
-//	
-//	NSError *error = nil;
-//	
-//	_scoresArray = [[self managedObjectContext] executeFetchRequest:_fetchRequest error:&error];
-//	
-//	return _scoresArray;
-//}
-
 
 - (NSArray *)queryDataWithPredicate:(NSString *)predicate
 {
 	id delegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = [delegate managedObjectContext];
 	
+    // Get the higest score based on gameType
 	_fetchRequest = [[NSFetchRequest alloc] init];
 	_entity = [NSEntityDescription entityForName:@"HighScore" inManagedObjectContext:[self managedObjectContext]];
 	_sort = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
@@ -145,7 +122,7 @@
     [_fetchRequest setPredicate:_predicate];
 	
 	NSError *error = nil;
-	
+	// Place scores into an array
 	_scoresArray = [[self managedObjectContext] executeFetchRequest:_fetchRequest error:&error];
 	
 	return _scoresArray;
